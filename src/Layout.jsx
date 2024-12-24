@@ -1,5 +1,6 @@
+import MainScreen from './MainScreen'
 import Sidebar from './Sidebar'
-import { Outlet } from 'react-router-dom'
+import './Layout.css';
 
 const Layout = () => {
   return (
@@ -7,8 +8,8 @@ const Layout = () => {
         <div>
             <Sidebar />
         </div>
-        <div>
-            <Outlet/>
+        <div className='main'>
+            <MainScreen/>
         </div>
     </>
   )

@@ -1,4 +1,4 @@
-import { useEffect} from "react";
+import { useEffect, useState } from "react";
 import logo from "./assets/Images/S.png";
 import "./Sidebar.css";
 import { FaRobot } from "react-icons/fa";
@@ -7,19 +7,19 @@ import { RiArrowRightDoubleLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsActive(!isActive);
+  };
 
   useEffect(() => {
-    const sidebarBtn = document.querySelector(".toggle-btn");
-    sidebarBtn.addEventListener("click", () => {
-      document.body.classNameList.toggle("active");
-    });
+    document.body.classList.toggle("active", isActive);
 
     return () => {
-      sidebarBtn.removeEventListener("click", () => {
-        document.body.classNameList.toggle("active");
-      });
+      document.body.classList.remove("active");
     };
-  }, []);
+  }, [isActive]);
   return (
     <>
       <nav>
@@ -29,13 +29,13 @@ const Sidebar = () => {
             <h2 className="hidden">Skyler</h2>
           </a>
           <button className="toggle-btn">
-            <RiArrowRightDoubleLine classNameName="icons" />
+            <RiArrowRightDoubleLine className="icons" onClick={toggleSidebar} />
           </button>
         </div>
 
         <div className="sidebar-links">
-          <Link to="/home" className="link active">
-            <FiHome classNameName="icons" />
+          <Link to="/home" className="link">
+            <FiHome className="icons" />
             <span className="hidden">Home</span>
           </Link>
           <Link to="/actions" className="link">

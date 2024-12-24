@@ -5,6 +5,7 @@ import "./Actions.css";
 
 const Actions = () => {
   useEffect(() => {
+    // eslint-disable-next-line no-unused-vars
     const swiper = new Swiper(".swiper", {
       direction: "horizontal",
       slidesPerView: 1,
