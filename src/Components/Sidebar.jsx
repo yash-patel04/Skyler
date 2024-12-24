@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import logo from "./assets/Images/S.png";
-import "./Sidebar.css";
+import logo from "../assets/Images/S.png";
+import "../CSS/Sidebar.css";
 import { FaRobot } from "react-icons/fa";
 import { FiHome } from "react-icons/fi";
 import { RiArrowRightDoubleLine } from "react-icons/ri";

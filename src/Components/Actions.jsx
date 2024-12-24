@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
-import "./Actions.css";
+import "../CSS/Actions.css";
 
 const Actions = () => {
   useEffect(() => {

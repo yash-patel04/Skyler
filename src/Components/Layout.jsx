@@ -1,6 +1,6 @@
 import MainScreen from './MainScreen'
 import Sidebar from './Sidebar'
-import './Layout.css';
+import '../CSS/Layout.css';
 
 const Layout = () => {
   return (
