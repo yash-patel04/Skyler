@@ -5,6 +5,7 @@ import SplashScreen from "./SplashScreen";
 import Home from "./Home";
 import Actions from "./Actions";
 
+
 function GlobalBehavior() {
   useEffect(() => {
     // Disable text selection globally

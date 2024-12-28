@@ -32,6 +32,7 @@ const VideoCard = ({
         src={videoSrc}
         className="video-card__video"
         controls={false}
+        muted
       />
       <div className="video-card__content">
         <h3 className="video-card__title">{title}</h3>

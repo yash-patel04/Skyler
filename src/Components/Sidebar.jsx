@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect } from "react";
-import logo from "../assets/Images/S.png";
+import logo from "../assets/Images/S-2.png";
 import "../CSS/Sidebar.css";
 import { FaRobot } from "react-icons/fa";
 import { FiHome } from "react-icons/fi";

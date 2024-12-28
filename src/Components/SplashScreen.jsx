@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../CSS/SplashScreen.css";
-import logo from "../assets/Videos/Logo.mp4";
+import logo from "../assets/Videos/Logo-2.mp4";
 
 const SplashScreen = () => {
   const [isEntering, setIsEntering] = useState(true);
