@@ -3,7 +3,6 @@ import "../CSS/Actions.css";
 
 const Actions = () => {
   const handleCustomButtonClick = (button) => {
-    // Add your custom logic here to handle the button click
     alert(`Clicked on ${button}`);
   };
 
@@ -178,7 +177,7 @@ const Actions = () => {
               key={video.id}
               videoSrc={video.videoSrc}
               title={video.title}
-              buttonLabel="Custom Action"
+              buttonLabel="Click to move"
               onButtonClick={() => handleCustomButtonClick(video.id)}
             />
           ))}
@@ -192,7 +191,7 @@ const Actions = () => {
               key={video.id}
               videoSrc={video.videoSrc}
               title={video.title}
-              buttonLabel="Custom Action"
+              buttonLabel="Click to move"
               onButtonClick={() => handleCustomButtonClick(video.id)}
             />
           ))}
@@ -206,7 +205,7 @@ const Actions = () => {
               key={video.id}
               videoSrc={video.videoSrc}
               title={video.title}
-              buttonLabel="Custom Action"
+              buttonLabel="Click to move"
               onButtonClick={() => handleCustomButtonClick(video.id)}
             />
           ))}
@@ -220,7 +219,7 @@ const Actions = () => {
               key={video.id}
               videoSrc={video.videoSrc}
               title={video.title}
-              buttonLabel="Custom Action"
+              buttonLabel="Click to move"
               onButtonClick={() => handleCustomButtonClick(video.id)}
             />
           ))}
@@ -234,7 +233,7 @@ const Actions = () => {
               key={video.id}
               videoSrc={video.videoSrc}
               title={video.title}
-              buttonLabel="Custom Action"
+              buttonLabel="Click to move"
               onButtonClick={() => handleCustomButtonClick(video.id)}
             />
           ))}

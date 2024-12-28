@@ -7,7 +7,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: clamp(1px, 2vw, 1px); /* Responsive margin */
+  margin: clamp(1px, 2vw, 1px);
 }
 
 .video-card:hover {
@@ -17,30 +17,30 @@
 
 .video-card__video {
   width: 100%;
-  height: clamp(150px, 20vw, 200px); /* Responsive height */
+  height: clamp(150px, 20vw, 200px);
   object-fit: cover;
 }
 
 .video-card__content {
-  padding: clamp(12px, 2vw, 20px); /* Responsive padding */
+  padding: clamp(12px, 2vw, 20px);
   text-align: center;
 }
 
 .video-card__title {
-  font-size: clamp(15px, 2vw, 19px); /* Responsive font size */
-  margin-bottom: clamp(4px, 1vw, 8px); /* Responsive margin */
+  font-size: clamp(15px, 2vw, 19px);
+  margin-bottom: clamp(4px, 1vw, 8px);
   color: #333;
 }
 
 .video-card__buttons {
   display: flex;
   justify-content: center;
-  gap: clamp(2px, 1vw, 5px); /* Responsive gap */
+  gap: clamp(2px, 1vw, 5px);
 }
 
 .btn {
   all: unset;
-  padding: clamp(0.2rem, 1vw, 0.6rem) clamp(0.7rem, 3vw, 1rem); /* Responsive padding */
+  padding: clamp(0.2rem, 1vw, 0.6rem) clamp(0.7rem, 3vw, 1rem);
   background-color: #fefefe;
   color: black;
   line-height: 1.5;
@@ -51,7 +51,7 @@
   overflow: hidden;
   z-index: 0;
   cursor: pointer;
-  font-size: clamp(10px, 2vw, 14px); /* Responsive font size */
+  font-size: clamp(10px, 2vw, 14px);
 }
 
 .btn::before,
@@ -59,7 +59,7 @@
   content: "";
   position: absolute;
   background: black;
-  border: 3px solid black;
+  border: 2px solid black;
   width: 100%;
   height: 103%;
   pointer-events: none;

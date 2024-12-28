@@ -1,11 +1,11 @@
 .video-card-container {
-  padding: 20px;
+  padding: 10px;
 }
 
 .video-card-container h2 {
   font-size: 24px;
   color: #333;
-  margin-bottom: 4px; /* Space between the heading and cards */
+  margin-bottom: 4px; 
   text-transform: uppercase;
   display: inline-block;
   padding-bottom: 4px;
@@ -14,7 +14,7 @@
 .video-card-grid {
   float: left;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Maximum 4 columns */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 16px;
   padding: 16px;
 }
@@ -24,24 +24,24 @@
 .body-posture-movements,
 .expressive-movements,
 .fitness-exercise-movements {
-  margin-bottom: 350px; /* Space between this section and the next */
+  margin-bottom: 350px; 
 }
 
 /* Responsive Breakpoints */
 @media (max-width: 992px) {
   .video-card-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
 @media (max-width: 768px) {
   .video-card-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (max-width: 576px) {
   .video-card-grid {
-    grid-template-columns: 1fr; /* Single column for very small screens */
+    grid-template-columns: 1fr; 
   }
 }

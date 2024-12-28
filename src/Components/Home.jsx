@@ -1,12 +1,11 @@
-const Home = () => {
+import About from "./About";
+
+const HomeScreen = () => {
   return (
     <>
-      <header className="header">
-        <h1>Skyler Control Center</h1>
-        <p>Welcome to Skyler home screen</p>
-      </header>
+      <About/>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default HomeScreen;
