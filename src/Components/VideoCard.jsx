@@ -16,8 +16,10 @@ const VideoCard = ({
 
   const togglePlayPause = () => {
     if (isPlaying) {
+      console.log(videoRef);
       videoRef.current.pause();
     } else {
+      console.log(videoRef);
       videoRef.current.play();
     }
     setIsPlaying(!isPlaying);
