@@ -2,8 +2,8 @@ const Home = () => {
   return (
     <>
       <header className="header">
-        <h1>IoT Robot Control Center</h1>
-        <p>Welcome to your IoT Robots home screen</p>
+        <h1>Skyler Control Center</h1>
+        <p>Welcome to Skyler home screen</p>
       </header>
     </>
   )
