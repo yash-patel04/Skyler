@@ -4,6 +4,7 @@ import Layout from "./Layout";
 import SplashScreen from "./SplashScreen";
 import Home from "./Home";
 import Actions from "./Actions";
+// import Card from "./Card";
 
 
 function GlobalBehavior() {

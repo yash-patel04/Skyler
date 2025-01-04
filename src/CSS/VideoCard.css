@@ -11,7 +11,7 @@
 
 .video-card:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 12px var(--l-1);
 }
 
 .video-card__video {
