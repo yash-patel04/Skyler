@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1,
+    "category_name": "Gesture and Greetings",
+    "categories": [
+      {
+        "id": 11,
+        "videoSrc": "https://www.vecteezy.com/free-videos/test",
+        "title": "Hello",
+        "clickEvent": ""
+      },
+      {
+        "id": 12,
+        "videoSrc": "https://www.youtube.com/watch?v=IyOv7Yhxaaw",
+        "title": "Shake Hand",
+        "clickEvent": ""
+      },
+      {
+        "id": 13,
+        "videoSrc": "",
+        "title": "Bow",
+        "clickEvent": ""
+      },
+      {
+        "id": 14,
+        "videoSrc": "",
+        "title": "Say",
+        "words": [
+          {
+            "id": 141,
+            "word": "Hello",
+            "clickEvent": ""
+          },
+          {
+            "id": 142,
+            "word": "How Are You?",
+            "clickEvent": ""
+          },
+          {
+            "id": 143,
+            "word": "I'm Fine",
+            "clickEvent": ""
+          },
+          {
+            "id": 144,
+            "word": "My name is Skyler",
+            "clickEvent": ""
+          },
+          {
+            "id": 145,
+            "word": "I'm IoT based Robot",
+            "clickEvent": ""
+          },
+          {
+            "id": 146,
+            "word": "My creator is Yash",
+            "clickEvent": ""
+          },
+          {
+            "id": 147,
+            "word": "How am i looking?",
+            "clickEvent": ""
+          },
+          {
+            "id": 148,
+            "word": "I love you all",
+            "clickEvent": ""
+          },
+          {
+            "id": 149,
+            "word": "I hope you all doing good",
+            "clickEvent": ""
+          },
+          {
+            "id": 1410,
+            "word": "Bye!",
+            "clickEvent": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category_name": "Arm and Hand Movements",
+    "categories": [
+      {
+        "id": 21,
+        "videoSrc": "",
+        "title": "Left Hand Up",
+        "clickEvent": ""
+      },
+      {
+        "id": 22,
+        "videoSrc": "",
+        "title": "Left Hand Down",
+        "clickEvent": ""
+      },
+      {
+        "id": 23,
+        "videoSrc": "",
+        "title": "Right Hand Up",
+        "clickEvent": ""
+      },
+      {
+        "id": 24,
+        "videoSrc": "",
+        "title": "Right Hand Down",
+        "clickEvent": ""
+      },
+      {
+        "id": 25,
+        "videoSrc": "",
+        "title": "Both Hands Up",
+        "clickEvent": ""
+      },
+      {
+        "id": 26,
+        "videoSrc": "",
+        "title": "Both Hands Down",
+        "clickEvent": ""
+      },
+      {
+        "id": 27,
+        "videoSrc": "",
+        "title": "Pickup Things",
+        "clickEvent": ""
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category_name": "Body and Posture Movements",
+    "categories": [
+      {
+        "id": 31,
+        "videoSrc": "",
+        "title": "Sit Up",
+        "clickEvent": ""
+      },
+      {
+        "id": 32,
+        "videoSrc": "",
+        "title": "Sit Down",
+        "clickEvent": ""
+      },
+      {
+        "id": 33,
+        "videoSrc": "",
+        "title": "Turn Left",
+        "clickEvent": ""
+      },
+      {
+        "id": 34,
+        "videoSrc": "",
+        "title": "Turn Right",
+        "clickEvent": ""
+      },
+      {
+        "id": 35,
+        "videoSrc": "",
+        "title": "Move Forward",
+        "clickEvent": ""
+      },
+      {
+        "id": 36,
+        "videoSrc": "",
+        "title": "Move Backward",
+        "clickEvent": ""
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category_name": "Expressive Movements",
+    "categories": [
+      {
+        "id": 41,
+        "videoSrc": "",
+        "title": "Right Biceps",
+        "clickEvent": ""
+      },
+      {
+        "id": 42,
+        "videoSrc": "",
+        "title": "Left Biceps",
+        "clickEvent": ""
+      },
+      {
+        "id": 43,
+        "videoSrc": "",
+        "title": "Double Biceps",
+        "clickEvent": ""
+      },
+      {
+        "id": 44,
+        "videoSrc": "",
+        "title": "Dab",
+        "clickEvent": ""
+      },
+      {
+        "id": 45,
+        "videoSrc": "",
+        "title": "Ape Move",
+        "clickEvent": ""
+      },
+      {
+        "id": 46,
+        "videoSrc": "",
+        "title": "Mean Karate",
+        "clickEvent": ""
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category_name": "Fitness and Exercise Movements",
+    "categories": [
+      {
+        "id": 51,
+        "videoSrc": "",
+        "title": "Exercise",
+        "clickEvent": ""
+      },
+      {
+        "id": 52,
+        "videoSrc": "",
+        "title": "Side Band",
+        "clickEvent": ""
+      }
+    ]
+  }
+]

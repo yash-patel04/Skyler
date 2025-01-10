@@ -11,37 +11,7 @@
   padding-bottom: 4px;
 }
 
-.video-card-grid {
-  float: left;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 16px;
-  padding: 16px;
-}
 /* Section Spacing */
-.gestures-greetings,
-.arm-hand-movements,
-.body-posture-movements,
-.expressive-movements,
-.fitness-exercise-movements {
+.video-heading {
   margin-bottom: 350px; 
-}
-
-/* Responsive Breakpoints */
-@media (max-width: 992px) {
-  .video-card-grid {
-    grid-template-columns: repeat(3, 1fr); 
-  }
-}
-
-@media (max-width: 768px) {
-  .video-card-grid {
-    grid-template-columns: repeat(2, 1fr); 
-  }
-}
-
-@media (max-width: 576px) {
-  .video-card-grid {
-    grid-template-columns: 1fr; 
-  }
 }

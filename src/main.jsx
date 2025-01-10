@@ -1,10 +1,11 @@
 import { createRoot } from "react-dom/client";
-import GlobalBehavior from "./Components/GlobalBehavior";
-import "./CSS/main.css"
+import "./CSS/main.css";
+import { StrictMode } from "react";
+import App from "./App";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
-  <>
-    <GlobalBehavior />
-  </>
+  <StrictMode>
+    <App />
+  </StrictMode>
 );
