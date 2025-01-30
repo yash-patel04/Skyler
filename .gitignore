@@ -8,13 +8,14 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-Skyler-Backend/
+
 dist
 dist-ssr
 *.local
 
 # Editor directories and files
 .vscode/*
+Skyler-Backend/
 !.vscode/extensions.json
 .idea
 .DS_Store
