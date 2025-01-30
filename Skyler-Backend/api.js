@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import express, { json, urlencoded } from "express";
 // import mongoose from "mongoose";
 import cors from "cors";
@@ -53,8 +52,8 @@ const findMainAction = (main_id) => actions.find((act) => act.id === main_id);
 const findSubAction = (mainAction, category_id) =>
   mainAction?.categories.find((cat) => cat.id === category_id);
 
-const findWords = (subAction, words_id) =>
-  subAction?.words?.find((word) => word.id === words_id);
+// const findWords = (subAction, words_id) =>
+//   subAction?.words?.find((word) => word.id === words_id);
 
 // Error response function
 const sendError = (res, message) => {
@@ -103,19 +102,19 @@ myServer.listen(PORT, () => console.log(`Server Started ${PORT}`));
 
 // // GET BY ID words
 
-app.get("/api/get/:main_id/:category_id/:word_id", (req, res) => {
-  const main_id = parseInt(req.params.main_id);
-  const category_id = parseInt(req.params.category_id);
-  const word_id = parseInt(req.params.word_id);
+// app.get("/api/get/:main_id/:category_id/:word_id", (req, res) => {
+//   const main_id = parseInt(req.params.main_id);
+//   const category_id = parseInt(req.params.category_id);
+//   const word_id = parseInt(req.params.word_id);
 
-  const mainAction = findMainAction(main_id);
-  if (!mainAction) return sendError(res, "Main action not found");
+//   const mainAction = findMainAction(main_id);
+//   if (!mainAction) return sendError(res, "Main action not found");
 
-  const subAction = findSubAction(mainAction, category_id);
-  if (!subAction) return sendError(res, "Sub action not found");
+//   const subAction = findSubAction(mainAction, category_id);
+//   if (!subAction) return sendError(res, "Sub action not found");
 
-  const words = findWords(subAction,word_id);
-  if (!words) return sendError(res, "Words not found");
+//   const words = findWords(subAction,word_id);
+//   if (!words) return sendError(res, "Words not found");
 
-  res.json(words );
-});
+//   res.json(words );
+// });
