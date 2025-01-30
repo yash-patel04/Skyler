@@ -7,24 +7,28 @@
         "id": 11,
         "videoSrc": "https://www.vecteezy.com/free-videos/test",
         "title": "Hello",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 12,
         "videoSrc": "https://www.youtube.com/watch?v=IyOv7Yhxaaw",
         "title": "Shake Hand",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 13,
         "videoSrc": "",
         "title": "Bow",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 14,
         "videoSrc": "",
         "title": "Say",
+        "btnName" : "Select words",
         "words": [
           {
             "id": 141,
@@ -88,43 +92,50 @@
         "id": 21,
         "videoSrc": "",
         "title": "Left Hand Up",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 22,
         "videoSrc": "",
         "title": "Left Hand Down",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 23,
         "videoSrc": "",
         "title": "Right Hand Up",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 24,
         "videoSrc": "",
         "title": "Right Hand Down",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 25,
         "videoSrc": "",
         "title": "Both Hands Up",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 26,
         "videoSrc": "",
         "title": "Both Hands Down",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 27,
         "videoSrc": "",
         "title": "Pickup Things",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       }
     ]
   },
@@ -136,37 +147,43 @@
         "id": 31,
         "videoSrc": "",
         "title": "Sit Up",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 32,
         "videoSrc": "",
         "title": "Sit Down",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 33,
         "videoSrc": "",
         "title": "Turn Left",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 34,
         "videoSrc": "",
         "title": "Turn Right",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 35,
         "videoSrc": "",
         "title": "Move Forward",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 36,
         "videoSrc": "",
         "title": "Move Backward",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       }
     ]
   },
@@ -178,37 +195,43 @@
         "id": 41,
         "videoSrc": "",
         "title": "Right Biceps",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 42,
         "videoSrc": "",
         "title": "Left Biceps",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 43,
         "videoSrc": "",
         "title": "Double Biceps",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 44,
         "videoSrc": "",
         "title": "Dab",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 45,
         "videoSrc": "",
         "title": "Ape Move",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 46,
         "videoSrc": "",
         "title": "Mean Karate",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       }
     ]
   },
@@ -220,13 +243,15 @@
         "id": 51,
         "videoSrc": "",
         "title": "Exercise",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       },
       {
         "id": 52,
         "videoSrc": "",
         "title": "Side Band",
-        "clickEvent": ""
+        "clickEvent": "",
+        "btnName" : "Click Here"
       }
     ]
   }

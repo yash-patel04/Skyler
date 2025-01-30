@@ -1,43 +1,50 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+import { useRef, useState } from "react";
 import "../CSS/VideoCard.css";
-import { Link } from "react-router-dom";
+import Modal from "./Modal";
 
 const VideoCard = ({ categories }) => {
   const [playingVideoId, setPlayingVideoId] = useState(null);
-  const [dropdownOpen, setDropdownOpen] = useState(false); // State for dropdown toggle
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const togglePlayPause = (id, videoRef) => {
+  const toggleModal = () => {
+    setIsModalOpen((prev) => !prev);
+  };
+
+  const videoRefs = useRef({});
+
+  const togglePlayPause = (id) => {
+    const videoRef = videoRefs.current[id];
     if (playingVideoId === id) {
-      videoRef.current.pause();
+      videoRef.pause();
       setPlayingVideoId(null);
     } else {
       if (playingVideoId !== null) {
-        const previousVideo = document.querySelector(
-          `[data-id="${playingVideoId}"]`
-        );
+        const previousVideo = videoRefs.current[playingVideoId];
         if (previousVideo) {
           previousVideo.pause();
         }
       }
-      videoRef.current.play();
+      videoRef.play();
       setPlayingVideoId(id);
     }
   };
 
-  const handleDropdownToggle = () => {
-    setDropdownOpen(!dropdownOpen);
+  const click = (id) => {
+    if (id === 14) {
+      toggleModal();
+    } else {
+      alert(id);
+    }
   };
 
   return (
-    <div className="video-card-grid">
-      {categories.map((cat) => {
-        const videoRef = React.createRef(); // Using useRef for video elements
-
-        return (
+    <>
+      <div className="video-card-grid">
+        {categories.map((cat) => (
           <div key={cat.id} className="video-card">
             <video
-              ref={videoRef}
+              ref={(el) => (videoRefs.current[cat.id] = el)}
               src={cat.videoSrc}
               className="video-card__video"
               controls={false}
@@ -47,10 +54,7 @@ const VideoCard = ({ categories }) => {
             <div className="video-card__content">
               <h3 className="video-card__title">{cat.title}</h3>
               <div className="video-card__buttons">
-                <button
-                  className="btn"
-                  onClick={() => togglePlayPause(cat.id, videoRef)}
-                >
+                <button className="btn" onClick={() => togglePlayPause(cat.id)}>
                   <div className="text-container">
                     <span className="text">
                       {playingVideoId === cat.id ? "Pause" : "Play"}
@@ -60,41 +64,19 @@ const VideoCard = ({ categories }) => {
                     </span>
                   </div>
                 </button>
-                {/* Dropdown Menu */}
-                {cat.id === 14 ? (
-                  <div id="dropdown" className="dropdown">
-                    <button
-                      className={`dropdown-toggle ${
-                        dropdownOpen ? "open" : ""
-                      }`}
-                      onClick={handleDropdownToggle}
-                    >
-                      <span>Word</span>
-                      <i className="fa-solid fa-caret-down"></i>
-                    </button>
-
-                    <ul className={`menu ${dropdownOpen ? "open" : ""}`}>
-                      {cat.words.map((w) => (
-                        <li className="menu-item" key={w.id}>
-                          <Link to={w.clickEvent}>{w.word}</Link>
-                        </li>
-                      ))}
-                    </ul>
+                <button className="btn" onClick={() => click(cat.id)}>
+                  <div className="text-container">
+                    <span className="text">{cat.btnName}</span>
+                    <span className="text">{cat.btnName}</span>
                   </div>
-                ) : (
-                  <button className="btn" onClick={cat.clickEvent}>
-                    <div className="text-container">
-                      <span className="text">Click Here</span>
-                      <span className="text">Click Here</span>
-                    </div>
-                  </button>
-                )}
+                </button>
               </div>
             </div>
           </div>
-        );
-      })}
-    </div>
+        ))}
+      </div>
+      {isModalOpen && <Modal isOpen={isModalOpen} onClose={toggleModal} />}
+    </>
   );
 };
 

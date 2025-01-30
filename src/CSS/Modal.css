@@ -1,0 +1,75 @@
+/* Modal backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background: var(--l-1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  width: auto;
+  text-align: center;
+}
+
+.heading {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--l-4);
+}
+
+/* modal-grid */
+.card-grid {
+  float: left;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+
+/* words-button */
+.w-button {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--l-3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: clamp(1px, 2vw, 1px);
+  color: var(--cl);
+  padding: 10px;
+  width: 100%;
+}
+
+.w-button:hover {
+  background-color: var(--l-2);
+}
+
+/* Close button */
+.close-button {
+  background-color: var(--cb);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.close-button:hover {
+  background-color: var(--cbh);
+}
