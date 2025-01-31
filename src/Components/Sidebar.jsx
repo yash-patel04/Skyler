@@ -42,6 +42,11 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             <span className="hidden">Actions</span>
           </Link>
         </div>
+        <div className="copyright">
+          {!isOpen ? <p>&copy; Skyler</p> : 
+            <p> &copy; 2025 Skyler. All rights reserved.</p>
+          }
+        </div>
       </nav>
     </>
   );
