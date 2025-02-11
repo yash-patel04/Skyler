@@ -20,7 +20,9 @@
   --clr-3: #ffc640;
   --clr-4: #e54cff;
   --cb: #ff4d4d;
-  --cbh: #e43e3e;
+  --cbh: #dd1313;
+  --rbh: red;
+  --sbh: rgb(129, 9, 9);
   --blur: 1rem;
   --fs: clamp(3rem, 8vw, 7rem);
   --ls: clamp(-1.75px, -0.25vw, -3.5px);

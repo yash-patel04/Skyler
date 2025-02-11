@@ -1,13 +1,11 @@
-// import './App.css'
-import GlobalBehavior from './Components/GlobalBehavior'
+import GlobalBehavior from "./Components/GlobalBehavior";
 
 const App = () => {
-
   return (
     <>
-      <GlobalBehavior/>
+      <GlobalBehavior />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -4,6 +4,8 @@ import Layout from "./Layout";
 import SplashScreen from "./SplashScreen";
 import Home from "./Home";
 import Actions from "./Actions";
+import LogReport from "./LogReport";
+import Auth from "./Auth";
 
 function GlobalBehavior() {
   useEffect(() => {
@@ -31,9 +33,11 @@ function GlobalBehavior() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<SplashScreen />} />
-          <Route path="/" element={<Layout />}>
-            <Route path="/home" element={<Home />} />
-            <Route path="/actions" element={<Actions />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/client" element={<Layout />}>
+            <Route path="home" element={<Home />} />
+            <Route path="actions" element={<Actions />} />
+            <Route path="log&Report" element={<LogReport />} />
           </Route>
         </Routes>
       </BrowserRouter>

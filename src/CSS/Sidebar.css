@@ -110,7 +110,7 @@ body.active .toggle-btn {
   transform: rotate(180deg);
 }
 
-.copyright{
+.copyright {
   margin-top: auto;
   color: var(--l-4);
   font-size: 0.8rem;

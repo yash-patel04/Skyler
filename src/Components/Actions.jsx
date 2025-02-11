@@ -1,12 +1,19 @@
 import VideoCard from "./VideoCard";
 import "../CSS/Actions.css";
-// import video from "../assets/Videos/video.mp4";
 import { useEffect, useState } from "react";
+// import { useNavigate } from "react-router-dom";
 
 const Actions = () => {
   const [actions, setActions] = useState([]);
 
+  // const token = localStorage.getItem("token");
+  // const navigate = useNavigate();
+
   useEffect(() => {
+    // if (token == null) {
+    //   navigate("/auth");
+    //   return;
+    // }
     async function getActions() {
       try {
         const response = await fetch(`http://localhost:4000/api/get`);

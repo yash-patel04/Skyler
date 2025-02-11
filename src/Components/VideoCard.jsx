@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useRef, useState } from "react";
 import "../CSS/VideoCard.css";
-import Modal from "./Modal";
+import Words from "./Words";
 
 const VideoCard = ({ categories }) => {
   const [playingVideoId, setPlayingVideoId] = useState(null);
@@ -75,7 +75,7 @@ const VideoCard = ({ categories }) => {
           </div>
         ))}
       </div>
-      {isModalOpen && <Modal isOpen={isModalOpen} onClose={toggleModal} />}
+      {isModalOpen && <Words isOpen={isModalOpen} onClose={toggleModal} />}
     </>
   );
 };

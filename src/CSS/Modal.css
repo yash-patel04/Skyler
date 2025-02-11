@@ -23,41 +23,6 @@
   text-align: center;
 }
 
-.heading {
-  text-align: center;
-  font-size: 40px;
-  font-weight: 600;
-  color: var(--l-4);
-}
-
-/* modal-grid */
-.card-grid {
-  float: left;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  padding: 16px;
-}
-
-/* words-button */
-.w-button {
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: var(--l-3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: clamp(1px, 2vw, 1px);
-  color: var(--cl);
-  padding: 10px;
-  width: 100%;
-}
-
-.w-button:hover {
-  background-color: var(--l-2);
-}
-
 /* Close button */
 .close-button {
   background-color: var(--cb);

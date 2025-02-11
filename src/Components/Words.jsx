@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import { motion, AnimatePresence } from "framer-motion";
 import "../CSS/Modal.css";
+import "../CSS/Words.css";
 import { useEffect, useState } from "react";
 
-const Modal = ({ isOpen, onClose }) => {
+const Words = ({ isOpen, onClose }) => {
   const [words, setWords] = useState([]);
 
   const main_id = 1;
@@ -47,8 +48,8 @@ const Modal = ({ isOpen, onClose }) => {
             exit={{ scale: 0.8, opacity: 0, transition: { duration: 0.3 } }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="heading">Words</div>
-            <div className="card-grid">
+            <div className="w-heading">Words</div>
+            <div className="w-card-grid">
               {words.map((word) => {
                 return (
                   <>
@@ -73,4 +74,4 @@ const Modal = ({ isOpen, onClose }) => {
   );
 };
 
-export default Modal;
+export default Words;

@@ -19,8 +19,8 @@ const SplashScreen = () => {
   const handleVideoEnd = () => {
     setIsExiting(true);
     setTimeout(() => {
-      navigate("/home");
-    }, 1000);
+      navigate("/auth");
+    }, 100);
   };
 
   return (
