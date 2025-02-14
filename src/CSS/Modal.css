@@ -16,11 +16,14 @@
 /* Modal content */
 .modal-content {
   background: var(--l-1);
-  padding: 20px;
+  padding: 35px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
   width: auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Close button */
@@ -28,7 +31,8 @@
   background-color: var(--cb);
   border: none;
   color: white;
-  padding: 10px 15px;
+  height: 40px;
+  width:70px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;

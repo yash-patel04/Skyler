@@ -30,11 +30,11 @@ const VideoCard = ({ categories }) => {
     }
   };
 
-  const click = (id) => {
-    if (id === 14) {
+  const click = (btnName, title) => {
+    if (btnName === "Select words") {
       toggleModal();
     } else {
-      alert(id);
+      alert(title);
     }
   };
 
@@ -42,29 +42,29 @@ const VideoCard = ({ categories }) => {
     <>
       <div className="video-card-grid">
         {categories.map((cat) => (
-          <div key={cat.id} className="video-card">
+          <div key={cat._id} className="video-card">
             <video
-              ref={(el) => (videoRefs.current[cat.id] = el)}
+              ref={(el) => (videoRefs.current[cat._id] = el)}
               src={cat.videoSrc}
               className="video-card__video"
               controls={false}
               muted
-              data-id={cat.id}
+              data-id={cat._id}
             />
             <div className="video-card__content">
               <h3 className="video-card__title">{cat.title}</h3>
               <div className="video-card__buttons">
-                <button className="btn" onClick={() => togglePlayPause(cat.id)}>
+                <button className="btn" onClick={() => togglePlayPause(cat._id)}>
                   <div className="text-container">
                     <span className="text">
-                      {playingVideoId === cat.id ? "Pause" : "Play"}
+                      {playingVideoId === cat._id ? "Pause" : "Play"}
                     </span>
                     <span className="text">
-                      {playingVideoId === cat.id ? "Pause" : "Play"}
+                      {playingVideoId === cat._id ? "Pause" : "Play"}
                     </span>
                   </div>
                 </button>
-                <button className="btn" onClick={() => click(cat.id)}>
+                <button className="btn" onClick={() => click(cat.btnName, cat.title)}>
                   <div className="text-container">
                     <span className="text">{cat.btnName}</span>
                     <span className="text">{cat.btnName}</span>

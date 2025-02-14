@@ -1,22 +1,22 @@
 import VideoCard from "./VideoCard";
 import "../CSS/Actions.css";
 import { useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Actions = () => {
   const [actions, setActions] = useState([]);
 
-  // const token = localStorage.getItem("token");
-  // const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // if (token == null) {
-    //   navigate("/auth");
-    //   return;
-    // }
+    if (token == null) {
+      navigate("/auth");
+      return;
+    }
     async function getActions() {
       try {
-        const response = await fetch(`http://localhost:4000/api/get`);
+        const response = await fetch(`http://localhost:4000/api/auth/get`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -30,14 +30,14 @@ const Actions = () => {
       }
     }
     getActions();
-  }, []);
+  }, [navigate]);
 
   return (
     <div className="video-card-container">
       {actions.map((act) => (
-        <div key={act.id} className="video-heading">
-          <h2>{act.category_name}</h2>
-          <VideoCard key={act.id} categories={act.categories} />
+        <div key={act._id} className="video-heading">
+          <div className="category_name">{act.category_name}</div>
+          <VideoCard key={act._id} categories={act.categories} />
         </div>
       ))}
     </div>

@@ -5,12 +5,14 @@ import "../CSS/Sidebar.css";
 import { FaRobot } from "react-icons/fa";
 import { FiHome } from "react-icons/fi";
 import { RiArrowRightDoubleLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
-import { TbReportAnalytics } from "react-icons/tb";
+import { Link, useNavigate } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
+
+  const navigate = useNavigate();
+
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
@@ -22,14 +24,19 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       document.body.classList.remove("active");
     };
   }, [isOpen]);
+
+  const handleClick = () => {
+    navigate("/client/home");
+  };
+
   return (
     <>
       <nav>
         {/* Logo-Header */}
         <div className="sidebar-header">
           <div className="logo-wrapper">
-            <img src={logo} alt="Logo" />
-            <h2 className="hidden">Skyler</h2>
+            <img src={logo} alt="Logo" onClick={handleClick} />
+            <div className="hidden sidebar-heading">Skyler</div>
           </div>
           <button className="toggle-btn">
             <RiArrowRightDoubleLine className="icons" onClick={toggleSidebar} />
@@ -44,7 +51,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             data-tooltip-id="tooltip-home"
           >
             <FiHome className="icons" />
-            <span className="hidden">Home</span>
+            <span className="hidden icon-name">Home</span>
           </Link>
           <Link
             to="/client/actions"
@@ -52,15 +59,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             data-tooltip-id="tooltip-actions"
           >
             <FaRobot className="icons" />
-            <span className="hidden">Actions</span>
-          </Link>
-          <Link
-            to="/client/log&Report"
-            className="link"
-            data-tooltip-id="tooltip-log"
-          >
-            <TbReportAnalytics className="icons" />
-            <span className="hidden">Log & Report</span>
+            <span className="hidden icon-name">Actions</span>
           </Link>
         </div>
 

@@ -4,7 +4,6 @@ import Layout from "./Layout";
 import SplashScreen from "./SplashScreen";
 import Home from "./Home";
 import Actions from "./Actions";
-import LogReport from "./LogReport";
 import Auth from "./Auth";
 
 function GlobalBehavior() {
@@ -37,10 +36,10 @@ function GlobalBehavior() {
           <Route path="/client" element={<Layout />}>
             <Route path="home" element={<Home />} />
             <Route path="actions" element={<Actions />} />
-            <Route path="log&Report" element={<LogReport />} />
           </Route>
         </Routes>
       </BrowserRouter>
+      {/* <Test/> */}
     </>
   );
 }

@@ -22,7 +22,12 @@
   --cb: #ff4d4d;
   --cbh: #dd1313;
   --rbh: red;
+  --rbh-1: rgb(205, 3, 3);
   --sbh: rgb(129, 9, 9);
+  --logo-1: #15B788;
+  --logo-2: #1395ba;
+  --con: #00d100;
+  --conh:rgb(3, 141, 3);
   --blur: 1rem;
   --fs: clamp(3rem, 8vw, 7rem);
   --ls: clamp(-1.75px, -0.25vw, -3.5px);

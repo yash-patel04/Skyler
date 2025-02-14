@@ -1,95 +1,101 @@
 import { useEffect, useState } from "react";
+import "../CSS/Auth.css";
+import logo from "../assets/Images/F-logo.png";
 import { useNavigate } from "react-router-dom";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Auth = () => {
-  let [data, setData] = useState({ UserName: "", Password: "" });
+  let [data, setData] = useState({ username: "", password: "" });
+  const [showPassword, setShowPassword] = useState(false);
+
   let navigate = useNavigate();
 
   useEffect(() => {
     if (localStorage.getItem("token") != null) {
       navigate("/client/home");
     }
-  }, []);
+  }, [navigate]);
+
+  function checkLogin(data){
+    console.log(data)
+    fetch("http://localhost:4000/api/auth/login", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        if (res.token) {
+          localStorage.setItem("token", res.token);
+          navigate("/client/home");
+        } else {
+          alert("Invalid credentials");
+        }
+      })
+      .catch((err) => {
+        console.error("Error during fetch:", err.message);
+      });
+  }
+
   return (
-    <>
-      <table>
-        <tr>
-          <td>Enter UserName:</td>
-          <td>
+    <div className="form-container">
+      {/* Left Section */}
+      <div className="left-section">
+        <div className="left-content">
+          <img alt="Skyler" className="logo" src={logo} />
+          <div className="f-heading">Skyler</div>
+        </div>
+      </div>
+
+      {/* Right Section */}
+      <div className="right-section">
+        <h2>Login</h2>
+        <form>
+          <div className="input-group">
+            <label>Username</label>
             <input
               type="text"
-              value={data.UserName}
+              placeholder="Username"
+              value={data.username}
               onChange={(e) => {
-                setData({ ...data, UserName: e.target.value });
+                setData({ ...data, username: e.target.value });
               }}
             />
-          </td>
-        </tr>
-        <tr>
-          <td>Enter Password:</td>
-          <td>
+          </div>
+            <label>Password</label>
+          <div className="input-group">
             <input
-              type="text"
-              value={data.Password}
+              type={showPassword ? "text" : "password"}
+              placeholder="Password"
+              value={data.password}
               onChange={(e) => {
-                setData({ ...data, Password: e.target.value });
+                setData({ ...data, password: e.target.value });
               }}
             />
-          </td>
-        </tr>
-        <tr>
-          <td colSpan={2}>
+            <span
+              type="button"
+              className="eye-button"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <FaEye /> : <FaEyeSlash />}
+            </span>
+          </div>
+          <div className="button-group">
             <button
-              className="btn btn-primary"
+              type="button"
+              className="login-btn"
               onClick={() => {
-                fetch("http://localhost:4000/login", {
-                  method: "POST",
-                  body: JSON.stringify(data),
-                  headers: { "Content-Type": "application/json" },
-                })
-                  .then((res) => res.json())
-                  .then((res) => {
-                    console.log(res);
-                    if (res.success) {
-                      // console.log("Login successful");
-                      localStorage.setItem("token", res.token);
-                      navigate("/client/home");
-                    } else {
-                      alert("Invalid credentials");
-                    }
-                  })
-                  .catch((err) => {
-                    console.error("Error during fetch:", err);
-                  });
+                checkLogin(data)
+                // navigate("/client/home");
               }}
             >
               Login
             </button>
-          </td>
-        </tr>
-      </table>
-    </>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };
-
 export default Auth;
-
-// import React, { useEffect } from 'react'
-// import { useNavigate } from 'react-router-dom';
-
-// const Home = () => {
-//   const token = localStorage.getItem('token');
-//   const navigate = useNavigate();
-//   useEffect(() => {
-//     if(token == null){
-//         navigate("/")
-//         return
-//     }
-//   },[])
-//     return (
-//       <div>Home</div>
-//     )
-
-// }
-
-// export default Home;

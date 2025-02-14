@@ -26,24 +26,40 @@
   justify-content: end;
   align-items: start;
 }
-.connect {
+
+.l-btn-container {
   font-size: 50px;
   margin-top: 20px;
   margin-right: 20px;
   color: var(--cl);
-  background-color: var(--l-4);
   border-radius: 100%;
   cursor: pointer;
   transition: background-color 0.2s;
   padding: 10px;
   box-shadow: 0 4px 10px var(--l-1);
   z-index: 1000;
+}
+
+.l-connected {
+  background-color: var(--con);
   &:hover {
-    background-color: var(--l-1);
+    background-color: var(--conh);
     color: var(--l-4);
   }
   &:active {
-    background-color: var(--l-2);
+    background-color: var(--conh);
+    color: var(--l-4);
+  }
+}
+
+.l-disconnected {
+  background-color: var(--rbh);
+  &:hover {
+    background-color: var(--rbh-1);
+    color: var(--l-4);
+  }
+  &:active {
+    background-color: var(--rbh-1);
     color: var(--l-4);
   }
 }
@@ -58,23 +74,17 @@
 }
 
 .stop {
-  font-size: 50px;
+  margin-top: 0px;
   margin-bottom: 20px;
-  margin-right: 20px;
   color: var(--l-4);
-  background-color: var(--cb);
-  border-radius: 100%;
-  cursor: pointer;
-  transition: background-color 0.2s;
+  background-color: var(--rbh);
   padding: 15px;
-  box-shadow: 0 2px 5px var(--cb);
-  z-index: 1000;
   &:hover {
-    background-color: var(--rbh);
+    background-color: var(--rbh-1);
     color: var(--l-4);
   }
   &:active {
-    background-color: var(--l-2);
+    background-color: var(--rbh-1);
     color: var(--l-4);
   }
 }

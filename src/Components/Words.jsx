@@ -7,14 +7,14 @@ import { useEffect, useState } from "react";
 const Words = ({ isOpen, onClose }) => {
   const [words, setWords] = useState([]);
 
-  const main_id = 1;
-  const categories_id = 14;
+  const main_id = "67ad6ad162dab0c252b370b6";
+  const categories_id = "67ad71aafc8adc81127c4939";
 
   useEffect(() => {
     async function getWords() {
       try {
         const response = await fetch(
-          `http://localhost:4000/api/get/${main_id}/${categories_id}`
+          `http://localhost:4000/api/auth/get/${main_id}/${categories_id}`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -53,7 +53,7 @@ const Words = ({ isOpen, onClose }) => {
               {words.map((word) => {
                 return (
                   <>
-                    <div key={word.id}>
+                    <div key={word._id}>
                       <button className="w-button" onClick={() => {}}>
                         <h4>{word.word}</h4>
                       </button>

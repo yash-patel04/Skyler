@@ -20,7 +20,7 @@ const SplashScreen = () => {
     setIsExiting(true);
     setTimeout(() => {
       navigate("/auth");
-    }, 100);
+    }, 1000);
   };
 
   return (

@@ -5,16 +5,14 @@ import { Outlet } from "react-router-dom";
 import Connection from "./Connection";
 import { TbPlugConnectedX } from "react-icons/tb";
 import { FaSquare } from "react-icons/fa";
+import { PiPlugsConnected } from "react-icons/pi";
 import EmergencyStop from "./EmergencyStop";
 
 const Layout = () => {
   const [isActive, setIsActive] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isEmModalOpen, setIsEmModalOpen] = useState(false);
-
-  const toggleModal = () => {
-    setIsModalOpen((prev) => !prev);
-  };
+  const [isConnect, setIsConnect] = useState(false);
+  const [connectionStatus, setConnectionStatus] = useState(false);
 
   const toggleEmModal = () => {
     setIsEmModalOpen((prev) => !prev);
@@ -30,17 +28,26 @@ const Layout = () => {
           <Outlet />
         </div>
         <div>
-          <button className="connection" onClick={toggleModal}>
-            <TbPlugConnectedX className="connect" />
+          <button className="connection" onClick={() => setIsConnect(true)}>
+            {connectionStatus ? (
+              <PiPlugsConnected className="l-connected l-btn-container" />
+            ) : (
+              <TbPlugConnectedX className="l-disconnected l-btn-container" />
+            )}
           </button>
         </div>
         <div>
           <button className="em-stop" onClick={toggleEmModal}>
-            <FaSquare className="stop" />
+            <FaSquare className="l-btn-container stop" />
           </button>
         </div>
-        {isModalOpen && (
-          <Connection isOpen={isModalOpen} onClose={toggleModal} />
+        {isConnect && (
+          <Connection
+            isOpen={isConnect}
+            onClose={() => setIsConnect(false)}
+            onConnectionChange={setConnectionStatus}
+            connectionStatus={connectionStatus}
+          />
         )}
         {isEmModalOpen && (
           <EmergencyStop isOpen={isEmModalOpen} onClose={toggleEmModal} />
