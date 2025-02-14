@@ -10,7 +10,6 @@ import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
-
   const navigate = useNavigate();
 
   const toggleSidebar = () => {

@@ -31,6 +31,21 @@ const Words = ({ isOpen, onClose }) => {
     getWords();
   }, []);
 
+  const handleWords = async (word) => {
+    await fetch("http://localhost:4000/api/auth/mqtt/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: word,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .catch((error) => console.error("Error:", error));
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -54,7 +69,10 @@ const Words = ({ isOpen, onClose }) => {
                 return (
                   <>
                     <div key={word._id}>
-                      <button className="w-button" onClick={() => {}}>
+                      <button
+                        className="w-button"
+                        onClick={() => handleWords(word.word)}
+                      >
                         <h4>{word.word}</h4>
                       </button>
                     </div>

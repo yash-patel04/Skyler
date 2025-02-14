@@ -16,8 +16,8 @@ const Auth = () => {
     }
   }, [navigate]);
 
-  function checkLogin(data){
-    console.log(data)
+  function checkLogin(data) {
+    console.log(data);
     fetch("http://localhost:4000/api/auth/login", {
       method: "POST",
       body: JSON.stringify(data),
@@ -63,7 +63,7 @@ const Auth = () => {
               }}
             />
           </div>
-            <label>Password</label>
+          <label>Password</label>
           <div className="input-group">
             <input
               type={showPassword ? "text" : "password"}
@@ -86,8 +86,7 @@ const Auth = () => {
               type="button"
               className="login-btn"
               onClick={() => {
-                checkLogin(data)
-                // navigate("/client/home");
+                checkLogin(data);
               }}
             >
               Login

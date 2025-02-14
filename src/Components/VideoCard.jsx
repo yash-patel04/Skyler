@@ -30,11 +30,22 @@ const VideoCard = ({ categories }) => {
     }
   };
 
-  const click = (btnName, title) => {
+  const click = async (btnName, title) => {
     if (btnName === "Select words") {
       toggleModal();
     } else {
-      alert(title);
+      await fetch("http://localhost:4000/api/auth/mqtt/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: title,
+        }),
+      })
+        .then((res) => res.json())
+        .then((res) => console.log(res))
+        .catch((error) => console.error("Error:", error));
     }
   };
 
@@ -54,7 +65,10 @@ const VideoCard = ({ categories }) => {
             <div className="video-card__content">
               <h3 className="video-card__title">{cat.title}</h3>
               <div className="video-card__buttons">
-                <button className="btn" onClick={() => togglePlayPause(cat._id)}>
+                <button
+                  className="btn"
+                  onClick={() => togglePlayPause(cat._id)}
+                >
                   <div className="text-container">
                     <span className="text">
                       {playingVideoId === cat._id ? "Pause" : "Play"}
@@ -64,7 +78,10 @@ const VideoCard = ({ categories }) => {
                     </span>
                   </div>
                 </button>
-                <button className="btn" onClick={() => click(cat.btnName, cat.title)}>
+                <button
+                  className="btn"
+                  onClick={() => click(cat.btnName, cat.title)}
+                >
                   <div className="text-container">
                     <span className="text">{cat.btnName}</span>
                     <span className="text">{cat.btnName}</span>
