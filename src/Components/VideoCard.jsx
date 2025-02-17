@@ -30,8 +30,8 @@ const VideoCard = ({ categories }) => {
     }
   };
 
-  const click = async (btnName, title) => {
-    if (btnName === "Select words") {
+  const click = async (id, num) => {
+    if (id === "67ad71aafc8adc81127c4939") {
       toggleModal();
     } else {
       await fetch("http://localhost:4000/api/auth/mqtt/messages", {
@@ -40,7 +40,7 @@ const VideoCard = ({ categories }) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          message: title,
+          message: num,
         }),
       })
         .then((res) => res.json())
@@ -80,7 +80,7 @@ const VideoCard = ({ categories }) => {
                 </button>
                 <button
                   className="btn"
-                  onClick={() => click(cat.btnName, cat.title)}
+                  onClick={() => click(cat._id, cat.clickEvent)}
                 >
                   <div className="text-container">
                     <span className="text">{cat.btnName}</span>

@@ -31,14 +31,14 @@ const Words = ({ isOpen, onClose }) => {
     getWords();
   }, []);
 
-  const handleWords = async (word) => {
+  const handleWords = async (num) => {
     await fetch("http://localhost:4000/api/auth/mqtt/messages", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        message: word,
+        message: num,
       }),
     })
       .then((res) => res.json())
@@ -71,7 +71,7 @@ const Words = ({ isOpen, onClose }) => {
                     <div key={word._id}>
                       <button
                         className="w-button"
-                        onClick={() => handleWords(word.word)}
+                        onClick={() => handleWords(word.clickEvent)}
                       >
                         <h4>{word.word}</h4>
                       </button>
