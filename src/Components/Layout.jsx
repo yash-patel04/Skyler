@@ -7,6 +7,7 @@ import { TbPlugConnectedX } from "react-icons/tb";
 import { FaSquare } from "react-icons/fa";
 import { PiPlugsConnected } from "react-icons/pi";
 import EmergencyStop from "./EmergencyStop";
+import ScrollProgress from "./ScrollProgress";
 
 const Layout = () => {
   const [isActive, setIsActive] = useState(false);
@@ -24,6 +25,7 @@ const Layout = () => {
         <div>
           <Sidebar isOpen={isActive} setIsOpen={setIsActive} />
         </div>
+        <ScrollProgress />
         <div className={`${isActive === true ? "open" : "close"}`}>
           <Outlet />
         </div>
