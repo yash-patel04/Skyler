@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 const Words = ({ isOpen, onClose }) => {
   const [words, setWords] = useState([]);
 
-  const main_id = "67ad6ad162dab0c252b370b6";
-  const categories_id = "67ad71aafc8adc81127c4939";
+  const main_id = "67b57a3ff90dd332c137a945";
+  const categories_id = "67b57c53163d503cf683951f";
 
   useEffect(() => {
     async function getWords() {
