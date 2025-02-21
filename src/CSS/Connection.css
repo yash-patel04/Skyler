@@ -14,18 +14,6 @@
   margin-bottom: 20px;
 }
 
-.status-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 20px;
-  margin-bottom: 20px;
-}
-
 .con-btn {
   padding: 15px;
   border-radius: 7px;
@@ -35,11 +23,10 @@
   border: none;
   cursor: pointer;
   margin-right: 10px;
-  
 }
 
 .connected {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px var(--btns);
   transition: background-color 0.2s;
   background-color: var(--con);
   &:hover {
@@ -53,7 +40,7 @@
 }
 
 .disconnected {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px var(--btns);
   transition: background-color 0.2s;
   background-color: var(--rbh);
   &:hover {
@@ -64,7 +51,4 @@
     background-color: var(--rbh-1);
     color: var(--l-4);
   }
-}
-
-.loading{
 }

@@ -2,16 +2,6 @@
   padding: 10px;
 }
 
-.video-card-container h2 {
-  font-size: 24px;
-  color: var(--l-3);
-  margin-bottom: 4px;
-  text-transform: uppercase;
-  display: inline-block;
-  padding-bottom: 4px;
-}
-
-/* Section Spacing */
 .video-heading {
   margin-bottom: 350px;
 }

@@ -17,12 +17,6 @@
   margin-bottom: 5px;
 }
 
-.name {
-  font-weight: 600;
-  font-size: 2rem;
-  font-style: italic;
-}
-
 .about-content {
   text-align: justify;
 }
@@ -31,6 +25,12 @@
   font-size: 1.5rem;
   color: var(--l-4);
   margin: 5px 0;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 2rem;
+  font-style: italic;
 }
 
 @media (max-width: 768px) {

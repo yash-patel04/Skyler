@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--btns);
   backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@
   background: var(--l-1);
   padding: 35px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 6px var(--btns);
   width: auto;
   text-align: center;
   display: flex;
@@ -30,14 +30,14 @@
 .close-button {
   background-color: var(--cb);
   border: none;
-  color: white;
+  color: var(--l-4);
   height: 40px;
   width:70px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
   margin-top: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px var(--btns);
 }
 .close-button:hover {
   background-color: var(--cbh);

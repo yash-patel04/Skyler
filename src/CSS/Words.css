@@ -18,14 +18,14 @@
 .w-button {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px var(--btns);
   border-radius: 8px;
   overflow: hidden;
   background-color: var(--l-3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: clamp(1px, 2vw, 1px);
   color: var(--cl);
-  padding: 10px;
+  padding: 10px 5px;
   width: 100%;
 }
 

@@ -1,18 +1,17 @@
 .form-container {
   display: flex;
   max-width: 1000px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+  background-color: var(--l-4);
+  box-shadow: 0 4px 8px var(--bs);
   border-radius: 8px;
   overflow: hidden;
   width: 100%;
 }
 
 .left-section {
-  background: linear-gradient(135deg, #15b788 20%, #1395ba 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--logo-1) 20%, var(--logo-2) 100%);
   width: 50%;
-  padding: 40px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +27,7 @@
 
 .logo {
   width: 200px;
-  height: 200px;
+  height: 250px;
 }
 
 .right-section {
@@ -67,24 +66,24 @@ h2 {
 label {
   display: block;
   margin-bottom: 5px;
-  color: #333;
+  color: var(--l-1);
   font-weight: bold;
 }
 
 .input-group input {
   width: 100%;
   padding: 10px 40px 10px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--l-3);
   border-radius: 5px;
   font-size: 16px;
   outline: none;
   &:focus {
     outline: none;
-    border-color: #15b788;
+    border-color: var(--logo-1);
   }
   &:hover {
     outline: none;
-    border-color: #1395ba;
+    border-color: var(--logo-2);
   }
 }
 
@@ -93,21 +92,20 @@ label {
 }
 
 .login-btn {
-  background: linear-gradient(135deg, #1395ba, #15b788);
-  /* background-color: #15b788; */
-  color: white;
+  background: linear-gradient(135deg, var(--logo-2), var(--logo-1));
+  color: var(--l-4);
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
   transition: background 0.25s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px var(--btns);
   &:hover {
-    background: linear-gradient(135deg, #15b788, #1395ba);
+    background: linear-gradient(135deg, var(--logo-1), var(--logo-2));
   }
   &:active {
-    background: linear-gradient(135deg, #1395ba, #15b788);
+    background: linear-gradient(135deg, var(--logo-2), var(--logo-1));
   }
 }
 
@@ -119,15 +117,14 @@ label {
   right: 0;
   top: 0;
   bottom: 0;
-  /* transform: translateY(-50%);/ */
   background: none;
   border: none;
   cursor: pointer;
   font-size: 18px;
-  color: #555;
+  color: var(--l-2);
   transition: color 0.3s ease;
 }
 
 .eye-button:hover {
-  color: #000;
+  color: var(--l-1);
 }

@@ -12,8 +12,6 @@ import arrowLeft from "../assets/arrow-left.svg";
 import arrowRight from "../assets/arrow-right.svg"; 
 
 function Carousel({ slides }) {
-  // const swiperLeft = useRef<HTMLDivElement>(null);
-  // const swiperRight = useRef<HTMLDivElement>(null);
 
   return (
     <Swiper
@@ -39,7 +37,7 @@ function Carousel({ slides }) {
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index} className="slide-inner">
-          <img src={slide} alt="" />
+          <img src={slide} alt="" className="img" />
         </SwiperSlide>
       ))}
       <div className="button-prev">
