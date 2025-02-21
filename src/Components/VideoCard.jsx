@@ -34,7 +34,7 @@ const VideoCard = ({ categories }) => {
     if (id === "67b57c53163d503cf683951f") {
       toggleModal();
     } else {
-      await fetch("http://localhost:4000/api/auth/mqtt/messages", {
+      await fetch(`${import.meta.env.VITE_API}/mqtt/messages`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

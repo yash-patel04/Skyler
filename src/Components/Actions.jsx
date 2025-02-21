@@ -16,7 +16,7 @@ const Actions = () => {
     }
     async function getActions() {
       try {
-        const response = await fetch(`http://localhost:4000/api/auth/get`);
+        const response = await fetch(`${import.meta.env.VITE_API}/get`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

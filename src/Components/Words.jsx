@@ -14,7 +14,7 @@ const Words = ({ isOpen, onClose }) => {
     async function getWords() {
       try {
         const response = await fetch(
-          `http://localhost:4000/api/auth/get/${main_id}/${categories_id}`
+          `${import.meta.env.VITE_API}/get/${main_id}/${categories_id}`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -32,7 +32,7 @@ const Words = ({ isOpen, onClose }) => {
   }, []);
 
   const handleWords = async (num) => {
-    await fetch("http://localhost:4000/api/auth/mqtt/messages", {
+    await fetch(`${import.meta.env.VITE_API}/mqtt/messages`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

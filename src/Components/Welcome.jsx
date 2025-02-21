@@ -26,24 +26,6 @@ const Welcome = () => {
             </div>
           </h1>
         </div>
-        {/* <div className="inner-container">
-          <div className="card">
-            <img src={photo1} />
-          </div>
-          <div className="card">
-            <img src={photo2} />
-          </div>
-          <div className="card">
-            <img src={photo3} />
-          </div>
-          <div className="card">
-            <img src={photo4} />
-          </div>
-          <div className="card">
-            <img src={photo5} />
-          </div>
-        </div> */}
-
           <Carousel slides={imgs} />
       </div>
     </>

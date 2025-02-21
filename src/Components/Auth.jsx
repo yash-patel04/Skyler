@@ -18,7 +18,7 @@ const Auth = () => {
 
   function checkLogin(data) {
     console.log(data);
-    fetch("http://localhost:4000/api/auth/login", {
+    fetch(`${import.meta.env.VITE_API}/login`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" },
