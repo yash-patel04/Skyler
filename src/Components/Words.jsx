@@ -73,7 +73,7 @@ const Words = ({ isOpen, onClose }) => {
                         className="w-button"
                         onClick={() => handleWords(word.clickEvent)}
                       >
-                        <h4>{word.word}</h4>
+                        <div className="w-title">{word.word}</div>
                       </button>
                     </div>
                   </>
