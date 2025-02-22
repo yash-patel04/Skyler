@@ -18,7 +18,7 @@ const Auth = () => {
 
   function checkLogin(data) {
     console.log(data);
-    fetch(`${import.meta.env.VITE_API}/login`, {
+    fetch(`https://skyler-backend.onrender.com/api/auth/login`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" },
