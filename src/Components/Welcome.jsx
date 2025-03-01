@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import "../CSS/Welcome.css";
 import photo1 from "../assets/Images/1.jpg";
 import photo2 from "../assets/Images/2.jpg";
