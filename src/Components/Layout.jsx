@@ -23,6 +23,7 @@ const Layout = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
+        console.log(data);
         setConnectionStatus(data);
       } catch (error) {
         console.error(
