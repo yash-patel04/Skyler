@@ -25,7 +25,7 @@ const Layout = () => {
         }
         const data = await response.json();
         console.log("message: ",data);
-        if (!data) {
+        if (data === "1") {
           setConnectionStatus(false);
         } else {
           setConnectionStatus(true);
@@ -37,12 +37,18 @@ const Layout = () => {
         );
       }
     }
-    // Get the response status 
-    setInterval(() => {
+    // Set up interval
+    const intervalId = setInterval(() => {
       getConnection();
-      console.log("Connection: ", connectionStatus);
     }, 2000);
-  }, [connectionStatus]);
+
+    // Initial call
+    getConnection();
+
+    // Cleanup interval on unmount
+    return () => clearInterval(intervalId);
+
+  }, []);
 
   const toggleEmModal = () => {
     setIsEmModalOpen((prev) => !prev);
