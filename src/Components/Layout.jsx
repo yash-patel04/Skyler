@@ -41,7 +41,7 @@ const Layout = () => {
     setInterval(() => {
       getConnection();
       console.log("Connection: ", connectionStatus);
-    }, 1000);
+    }, 2000);
   }, [connectionStatus]);
 
   const toggleEmModal = () => {
