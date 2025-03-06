@@ -25,10 +25,12 @@ const Layout = () => {
         }
         const data = await response.json();
         console.log("message: ",data);
-        if (data === "1") {
-          setConnectionStatus(false);
-        } else {
+        if (data.message === "1") {
           setConnectionStatus(true);
+          console.log("true");
+        } else {
+          setConnectionStatus(false);
+          console.log("false");
         }
       } catch (error) {
         console.error(
@@ -40,6 +42,7 @@ const Layout = () => {
     // Set up interval
     const intervalId = setInterval(() => {
       getConnection();
+      console.log("message: ",connectionStatus);
     }, 2000);
 
     // Initial call
