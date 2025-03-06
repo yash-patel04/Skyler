@@ -24,32 +24,19 @@ const Layout = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log("message: ",data);
-        if (data.message === "1") {
-          setConnectionStatus(true);
-          console.log("true");
-        } else {
-          setConnectionStatus(false);
-          console.log("false");
-        }
+        setConnectionStatus(data.message === "1"); // Set boolean based on message
       } catch (error) {
         console.error(
           "There has been a problem with your fetch operation:",
           error
         );
+        setConnectionStatus(false); // Fallback to false on error
       }
     }
-    // Set up interval
-    const intervalId = setInterval(() => {
-      getConnection();
-      console.log("message: ",connectionStatus);
-    }, 2000);
+    getConnection(); // Initial call
+    const intervalId = setInterval(getConnection, 5000); // Poll every 5 seconds
 
-    // Initial call
-    getConnection();
-
-    // Cleanup interval on unmount
-    return () => clearInterval(intervalId);
+    return () => clearInterval(intervalId); // Cleanup;
 
   }, []);
 
@@ -68,7 +55,7 @@ const Layout = () => {
           <Outlet />
         </div>
         <div className="connection">
-          {connectionStatus.message === "1" ? (
+          {connectionStatus ? (
             <PiPlugsConnected className="l-connected l-btn-container" />
           ) : (
             <TbPlugConnectedX className="l-disconnected l-btn-container" />

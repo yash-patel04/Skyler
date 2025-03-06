@@ -17,7 +17,6 @@ const Auth = () => {
   }, [navigate]);
 
   function checkLogin(data) {
-    console.log(data);
     fetch(`${import.meta.env.VITE_API}/login`, {
       method: "POST",
       body: JSON.stringify(data),
@@ -25,7 +24,6 @@ const Auth = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
         if (res.token) {
           localStorage.setItem("token", res.token);
           navigate("/client/home");

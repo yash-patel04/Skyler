@@ -44,7 +44,6 @@ const VideoCard = ({ categories }) => {
         }),
       })
         .then((res) => res.json())
-        .then((res) => console.log(res))
         .catch((error) => console.error("Error:", error));
     }
   };
