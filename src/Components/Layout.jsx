@@ -49,7 +49,7 @@ const Layout = () => {
           <Outlet />
         </div>
         <div className="connection">
-          {connectionStatus.message === 1 ? (
+          {connectionStatus.message === "1" ? (
             <PiPlugsConnected className="l-connected l-btn-container" />
           ) : (
             <TbPlugConnectedX className="l-disconnected l-btn-container" />
