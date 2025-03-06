@@ -25,10 +25,10 @@ const Layout = () => {
         }
         const data = await response.json();
         // console.log(data);
-        if (data === 1) {
-          setConnectionStatus(true);
-        } else {
+        if (!data) {
           setConnectionStatus(false);
+        } else {
+          setConnectionStatus(true);
         }
       } catch (error) {
         console.error(
