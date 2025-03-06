@@ -24,7 +24,7 @@ const Welcome = () => {
             </div>
           </h1>
         </div>
-          <Carousel slides={imgs} />
+        <Carousel slides={imgs} />
       </div>
     </>
   );

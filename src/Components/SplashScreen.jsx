@@ -25,9 +25,8 @@ const SplashScreen = () => {
 
   return (
     <div
-      className={`splash-screen ${isEntering ? "enter-animation" : ""} ${
-        isExiting ? "exit-animation" : ""
-      }`}
+      className={`splash-screen ${isEntering ? "enter-animation" : ""} ${isExiting ? "exit-animation" : ""
+        }`}
     >
       <video className="splash-video" autoPlay muted onEnded={handleVideoEnd}>
         <source src={logo} type="video/mp4" />
