@@ -16,6 +16,7 @@ const Layout = () => {
   useEffect(() => {
     async function getConnection() {
       try {
+        // Check MQTT connection status
         const response = await fetch(
           `${import.meta.env.VITE_API}/mqtt/connected`
         );
@@ -24,10 +25,9 @@ const Layout = () => {
         }
         const data = await response.json();
         console.log(data);
-        if(data === "1"){
+        if (data === "1") {
           setConnectionStatus(true);
-        }
-        else{
+        } else {
           setConnectionStatus(false);
         }
       } catch (error) {
@@ -37,8 +37,12 @@ const Layout = () => {
         );
       }
     }
-    getConnection();
-  },[connectionStatus]);
+    // Get the response status 
+    setInterval(() => {
+      getConnection();
+      console.log("Connection: ", connectionStatus);
+    }, 1000);
+  }, [connectionStatus]);
 
   const toggleEmModal = () => {
     setIsEmModalOpen((prev) => !prev);
