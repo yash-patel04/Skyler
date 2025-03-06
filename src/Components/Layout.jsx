@@ -24,7 +24,12 @@ const Layout = () => {
         }
         const data = await response.json();
         console.log(data);
-        setConnectionStatus(data);
+        if(data === "1"){
+          setConnectionStatus(true);
+        }
+        else{
+          setConnectionStatus(false);
+        }
       } catch (error) {
         console.error(
           "There has been a problem with your fetch operation:",
@@ -33,7 +38,7 @@ const Layout = () => {
       }
     }
     getConnection();
-  });
+  },[connectionStatus]);
 
   const toggleEmModal = () => {
     setIsEmModalOpen((prev) => !prev);
