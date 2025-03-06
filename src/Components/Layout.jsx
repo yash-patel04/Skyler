@@ -25,7 +25,7 @@ const Layout = () => {
         }
         const data = await response.json();
         console.log(data);
-        if (data === "1") {
+        if (data === 1) {
           setConnectionStatus(true);
         } else {
           setConnectionStatus(false);
