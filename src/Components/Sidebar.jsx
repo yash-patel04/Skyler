@@ -71,19 +71,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           anchorSelect="[data-tooltip-id='tooltip-actions']"
           content="View Actions"
         />
-        <Tooltip
-          anchorSelect="[data-tooltip-id='tooltip-log']"
-          content="View Logs & Reports"
-        />
 
-        {/* Copyright */}
-        <div className="copyright">
-          {!isOpen ? (
-            <p>&copy; Skyler</p>
-          ) : (
-            <p> &copy; 2025 Skyler. All rights reserved.</p>
-          )}
-        </div>
       </nav>
     </>
   );

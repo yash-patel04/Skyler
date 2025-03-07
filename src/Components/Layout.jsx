@@ -3,14 +3,17 @@ import "../CSS/Layout.css";
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { TbPlugConnectedX } from "react-icons/tb";
-import { FaSquare } from "react-icons/fa";
+// import { FaSquare } from "react-icons/fa";
 import { PiPlugsConnected } from "react-icons/pi";
-import EmergencyStop from "./EmergencyStop";
+import { GiVintageRobot } from "react-icons/gi";
+// import EmergencyStop from "./EmergencyStop";
 import ScrollProgress from "./ScrollProgress";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 
 const Layout = () => {
   const [isActive, setIsActive] = useState(false);
-  const [isEmModalOpen, setIsEmModalOpen] = useState(false);
+  // const [isEmModalOpen, setIsEmModalOpen] = useState(false);
   const [connectionStatus, setConnectionStatus] = useState(false);
 
   useEffect(() => {
@@ -40,8 +43,22 @@ const Layout = () => {
 
   }, []);
 
-  const toggleEmModal = () => {
-    setIsEmModalOpen((prev) => !prev);
+  // const toggleEmModal = () => {
+  //   setIsEmModalOpen((prev) => !prev);
+  // };
+
+  const setInitial = async () => {
+    await fetch(`${import.meta.env.VITE_API}/mqtt/messages`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: "2",
+      }),
+    })
+      .then((res) => res.json())
+      .catch((error) => console.error("Error:", error));
   };
 
   return (
@@ -56,19 +73,34 @@ const Layout = () => {
         </div>
         <div className="connection">
           {connectionStatus ? (
-            <PiPlugsConnected className="l-connected l-btn-container" />
+            <PiPlugsConnected className="l-connected l-btn-container" data-tooltip-id="tooltip-connected"/>
           ) : (
-            <TbPlugConnectedX className="l-disconnected l-btn-container" />
+            <TbPlugConnectedX className="l-disconnected l-btn-container" data-tooltip-id="tooltip-disconnected" />
           )}
         </div>
         <div>
-          <button className="em-stop" onClick={toggleEmModal}>
-            <FaSquare className="l-btn-container stop" />
+          <button className="initial" onClick={setInitial}>
+            <GiVintageRobot className="l-btn-container set-initial" data-tooltip-id="tooltip-initial" />
           </button>
         </div>
-        {isEmModalOpen && (
+
+        {/* Tooltips */}
+        <Tooltip
+          anchorSelect="[data-tooltip-id='tooltip-disconnected']"
+          content="Disconnected"
+        />
+        <Tooltip
+          anchorSelect="[data-tooltip-id='tooltip-connected']"
+          content="Connected"
+        />
+        <Tooltip
+          anchorSelect="[data-tooltip-id='tooltip-initial']"
+          content="Set Initial"
+        />
+
+        {/* {isEmModalOpen && (
           <EmergencyStop isOpen={isEmModalOpen} onClose={toggleEmModal} />
-        )}
+        )} */}
       </div>
     </>
   );

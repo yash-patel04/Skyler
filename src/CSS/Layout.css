@@ -44,10 +44,12 @@
 
 .l-connected {
   background-color: var(--con);
+
   &:hover {
     background-color: var(--conh);
     color: var(--l-4);
   }
+
   &:active {
     background-color: var(--conh);
     color: var(--l-4);
@@ -56,37 +58,39 @@
 
 .l-disconnected {
   background-color: var(--rbh);
+
   &:hover {
     background-color: var(--rbh-1);
     color: var(--l-4);
   }
+
   &:active {
     background-color: var(--rbh-1);
     color: var(--l-4);
   }
 }
 
-.em-stop {
+.initial {
   position: fixed;
   bottom: 0;
   right: 0;
   display: flex;
   justify-content: end;
   align-items: start;
+  z-index: 9999;
 }
 
-.stop {
+.set-initial {
   margin-top: 0px;
   margin-bottom: 20px;
   color: var(--l-4);
   background-color: var(--rbh);
   padding: 15px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  z-index: 1000;
   &:hover {
     background-color: var(--rbh-1);
-    color: var(--l-4);
-  }
-  &:active {
-    background-color: var(--rbh-1);
-    color: var(--l-4);
+    color: var(--l-3);
   }
 }
