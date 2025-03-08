@@ -29,9 +29,11 @@ const Actions = () => {
         );
       }
     }
-    setInterval(()=>{
+    getActions();
+    const interval = setInterval(() => {
       getActions();
-    },10000);
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
