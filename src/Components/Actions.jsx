@@ -32,7 +32,7 @@ const Actions = () => {
     getActions();
     const interval = setInterval(() => {
       getActions();
-    }, 5000);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
