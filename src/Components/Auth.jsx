@@ -14,7 +14,7 @@ const Auth = () => {
     if (localStorage.getItem("token") != null) {
       navigate("/client/home");
     }
-  }, [navigate]);
+  }, []);
 
   function checkLogin(data) {
     fetch(`${import.meta.env.VITE_API}/login`, {

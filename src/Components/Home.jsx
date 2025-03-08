@@ -1,4 +1,3 @@
-// import { useEffect } from "react";
 import { useEffect } from "react";
 import About from "./About";
 import Welcome from "./Welcome";
