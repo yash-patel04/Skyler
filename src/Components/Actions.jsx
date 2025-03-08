@@ -29,8 +29,10 @@ const Actions = () => {
         );
       }
     }
-    getActions();
-  }, [navigate]);
+    setInterval(()=>{
+      getActions();
+    },10000);
+  }, []);
 
   return (
     <div className="video-card-container">
