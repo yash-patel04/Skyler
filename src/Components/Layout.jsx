@@ -16,32 +16,32 @@ const Layout = () => {
   // const [isEmModalOpen, setIsEmModalOpen] = useState(false);
   const [connectionStatus, setConnectionStatus] = useState(false);
 
-  useEffect(() => {
-    async function getConnection() {
-      try {
-        // Check MQTT connection status
-        const response = await fetch(
-          `${import.meta.env.VITE_API}/mqtt/connected`
-        );
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        setConnectionStatus(data.message === "1"); // Set boolean based on message
-      } catch (error) {
-        console.error(
-          "There has been a problem with your fetch operation:",
-          error
-        );
-        setConnectionStatus(false); // Fallback to false on error
-      }
-    }
-    getConnection(); // Initial call
-    const intervalId = setInterval(getConnection, 5000); // Poll every 5 seconds
+  // useEffect(() => {
+  //   async function getConnection() {
+  //     try {
+  //       // Check MQTT connection status
+  //       const response = await fetch(
+  //         `${import.meta.env.VITE_API}/mqtt/connected`
+  //       );
+  //       if (!response.ok) {
+  //         throw new Error(`HTTP error! status: ${response.status}`);
+  //       }
+  //       const data = await response.json();
+  //       setConnectionStatus(data.message === "1"); // Set boolean based on message
+  //     } catch (error) {
+  //       console.error(
+  //         "There has been a problem with your fetch operation:",
+  //         error
+  //       );
+  //       setConnectionStatus(false); // Fallback to false on error
+  //     }
+  //   }
+  //   getConnection(); // Initial call
+  //   const intervalId = setInterval(getConnection, 5000); // Poll every 5 seconds
 
-    return () => clearInterval(intervalId); // Cleanup;
+  //   return () => clearInterval(intervalId); // Cleanup;
 
-  }, []);
+  // }, []);
 
   // const toggleEmModal = () => {
   //   setIsEmModalOpen((prev) => !prev);
