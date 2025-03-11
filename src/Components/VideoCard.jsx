@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useRef, useState } from "react";
 import "../CSS/VideoCard.css";
-import Words from "./Words";
 
 const VideoCard = ({ categories }) => {
   const [playingVideoId, setPlayingVideoId] = useState(null);
