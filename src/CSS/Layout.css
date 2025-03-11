@@ -18,7 +18,7 @@
   transition: margin-left 500ms ease;
 }
 
-.connection {
+/* .connection {
   position: fixed;
   top: 0;
   right: 0;
@@ -26,8 +26,7 @@
   justify-content: end;
   align-items: start;
   z-index: 9999;
-  /* background-color: var(--cl); */
-}
+} */
 
 .l-btn-container {
   font-size: 50px;
@@ -42,7 +41,7 @@
   z-index: 1000;
 }
 
-.l-connected {
+/* .l-connected {
   background-color: var(--con);
 
   &:hover {
@@ -68,7 +67,7 @@
     background-color: var(--rbh-1);
     color: var(--l-4);
   }
-}
+} */
 
 .initial {
   position: fixed;
@@ -83,14 +82,14 @@
 .set-initial {
   margin-top: 0px;
   margin-bottom: 20px;
-  color: var(--l-4);
-  background-color: var(--rbh);
+  color: var(--cl);
+  background-color: var(--l-4);
   padding: 15px;
   transition: background-color 0.2s;
   cursor: pointer;
   z-index: 1000;
   &:hover {
-    background-color: var(--rbh-1);
-    color: var(--l-3);
+    background-color: var(--l-3);
+    color: var(--l-1);
   }
 }
