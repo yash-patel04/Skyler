@@ -90,6 +90,5 @@
   z-index: 1000;
   &:hover {
     background-color: var(--l-3);
-    color: var(--l-1);
   }
 }
