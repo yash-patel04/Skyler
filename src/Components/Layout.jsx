@@ -23,6 +23,7 @@ const Layout = () => {
         const response = await fetch(
           `${import.meta.env.MQTT_API}/mqtt/connected`
         );
+        console.log(import.meta.env.MQTT_API);  
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
