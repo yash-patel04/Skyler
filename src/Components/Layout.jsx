@@ -10,6 +10,7 @@ import { GiVintageRobot } from "react-icons/gi";
 import ScrollProgress from "./ScrollProgress";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
+import env from "../env";
 
 const Layout = () => {
   const [isActive, setIsActive] = useState(false);
@@ -21,7 +22,7 @@ const Layout = () => {
       try {
         // Check MQTT connection status
         const response = await fetch(
-          `https://mqtt-connection.onrender.com/client/mqtt/connected`
+          `${env.MQTT_API}/mqtt/connected`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
