@@ -35,7 +35,7 @@ const Layout = () => {
       }
     }
     getConnection(); // Initial call
-    const intervalId = setInterval(getConnection, 3000); // Poll every 3 seconds
+    const intervalId = setInterval(getConnection, 10000); // Poll every 3 seconds
 
     return () => clearInterval(intervalId); // Cleanup;
 
