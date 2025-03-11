@@ -39,7 +39,6 @@ function GlobalBehavior() {
           </Route>
         </Routes>
       </BrowserRouter>
-      {/* <Test/> */}
     </>
   );
 }

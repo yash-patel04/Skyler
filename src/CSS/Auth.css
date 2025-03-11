@@ -77,10 +77,12 @@ label {
   border-radius: 5px;
   font-size: 16px;
   outline: none;
+
   &:focus {
     outline: none;
     border-color: var(--logo-1);
   }
+
   &:hover {
     outline: none;
     border-color: var(--logo-2);
@@ -101,9 +103,11 @@ label {
   font-weight: bold;
   transition: background 0.25s;
   box-shadow: 0 4px 6px var(--btns);
+
   &:hover {
     background: linear-gradient(135deg, var(--logo-1), var(--logo-2));
   }
+
   &:active {
     background: linear-gradient(135deg, var(--logo-2), var(--logo-1));
   }
@@ -122,9 +126,4 @@ label {
   cursor: pointer;
   font-size: 18px;
   color: var(--l-2);
-  transition: color 0.3s ease;
-}
-
-.eye-button:hover {
-  color: var(--l-1);
 }
