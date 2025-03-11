@@ -48,7 +48,7 @@ const Layout = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        message: "2",
+        message: "1",
       }),
     })
       .then((res) => res.json())
