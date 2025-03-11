@@ -21,7 +21,7 @@ const Layout = () => {
       try {
         // Check MQTT connection status
         const response = await fetch(
-          `${import.meta.env.MQTT_API}/mqtt/connected`
+          `https://mqtt-connection.onrender.com/client/mqtt/connected`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
