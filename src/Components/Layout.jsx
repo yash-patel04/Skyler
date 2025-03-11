@@ -3,17 +3,14 @@ import "../CSS/Layout.css";
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { TbPlugConnectedX } from "react-icons/tb";
-// import { FaSquare } from "react-icons/fa";
 import { PiPlugsConnected } from "react-icons/pi";
 import { GiVintageRobot } from "react-icons/gi";
-// import EmergencyStop from "./EmergencyStop";
 import ScrollProgress from "./ScrollProgress";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 
 const Layout = () => {
   const [isActive, setIsActive] = useState(false);
-  // const [isEmModalOpen, setIsEmModalOpen] = useState(false);
   const [connectionStatus, setConnectionStatus] = useState(false);
 
   useEffect(() => {
@@ -23,7 +20,7 @@ const Layout = () => {
         const response = await fetch(
           `${import.meta.env.VITE_MQTT_API}/mqtt/connected`
         );
-        console.log(import.meta.env.VITE_MQTT_API);  
+        console.log(import.meta.env.VITE_MQTT_API);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -38,15 +35,11 @@ const Layout = () => {
       }
     }
     getConnection(); // Initial call
-    const intervalId = setInterval(getConnection, 5000); // Poll every 5 seconds
+    const intervalId = setInterval(getConnection, 3000); // Poll every 3 seconds
 
     return () => clearInterval(intervalId); // Cleanup;
 
   }, []);
-
-  // const toggleEmModal = () => {
-  //   setIsEmModalOpen((prev) => !prev);
-  // };
 
   const setInitial = async () => {
     await fetch(`${import.meta.env.VITE_API}/mqtt/messages`, {
@@ -74,7 +67,7 @@ const Layout = () => {
         </div>
         <div className="connection">
           {connectionStatus ? (
-            <PiPlugsConnected className="l-connected l-btn-container" data-tooltip-id="tooltip-connected"/>
+            <PiPlugsConnected className="l-connected l-btn-container" data-tooltip-id="tooltip-connected" />
           ) : (
             <TbPlugConnectedX className="l-disconnected l-btn-container" data-tooltip-id="tooltip-disconnected" />
           )}
@@ -99,9 +92,6 @@ const Layout = () => {
           content="Set Initial"
         />
 
-        {/* {isEmModalOpen && (
-          <EmergencyStop isOpen={isEmModalOpen} onClose={toggleEmModal} />
-        )} */}
       </div>
     </>
   );
