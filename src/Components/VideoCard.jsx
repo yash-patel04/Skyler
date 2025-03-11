@@ -5,11 +5,6 @@ import Words from "./Words";
 
 const VideoCard = ({ categories }) => {
   const [playingVideoId, setPlayingVideoId] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const toggleModal = () => {
-    setIsModalOpen((prev) => !prev);
-  };
 
   const videoRefs = useRef({});
 
@@ -30,22 +25,19 @@ const VideoCard = ({ categories }) => {
     }
   };
 
-  const click = async (id, num) => {
-    if (id === "67b57c53163d503cf683951f") {
-      toggleModal();
-    } else {
-      await fetch(`${import.meta.env.VITE_API}/mqtt/messages`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          message: num,
-        }),
-      })
-        .then((res) => res.json())
-        .catch((error) => console.error("Error:", error));
-    }
+  const click = async (num) => {
+    await fetch(`${import.meta.env.VITE_API}/mqtt/messages`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: num,
+      }),
+    })
+      .then((res) => res.json())
+      .catch((error) => console.error("Error:", error));
+
   };
 
   return (
@@ -79,7 +71,7 @@ const VideoCard = ({ categories }) => {
                 </button>
                 <button
                   className="btn"
-                  onClick={() => click(cat._id, cat.clickEvent)}
+                  onClick={() => click(cat.clickEvent)}
                 >
                   <div className="text-container">
                     <span className="text">{cat.btnName}</span>
@@ -91,7 +83,6 @@ const VideoCard = ({ categories }) => {
           </div>
         ))}
       </div>
-      {isModalOpen && <Words isOpen={isModalOpen} onClose={toggleModal} />}
     </>
   );
 };
