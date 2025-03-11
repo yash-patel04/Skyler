@@ -10,7 +10,6 @@ import { GiVintageRobot } from "react-icons/gi";
 import ScrollProgress from "./ScrollProgress";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
-import env from "../env";
 
 const Layout = () => {
   const [isActive, setIsActive] = useState(false);
