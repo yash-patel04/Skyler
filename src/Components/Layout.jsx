@@ -22,7 +22,7 @@ const Layout = () => {
       try {
         // Check MQTT connection status
         const response = await fetch(
-          `${env.MQTT_API}/mqtt/connected`
+          `${process.env.MQTT_API}/mqtt/connected`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
