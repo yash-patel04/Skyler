@@ -31,7 +31,6 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
   return (
     <>
       <nav>
-        {/* Logo-Header */}
         <div className="sidebar-header">
           <div className="logo-wrapper">
             <img src={logo} alt="Logo" onClick={handleClick} />
@@ -42,7 +41,6 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           </button>
         </div>
 
-        {/* Sidebar-Links */}
         <div className="sidebar-links">
           <Link
             to="/client/home"
@@ -62,7 +60,6 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           </Link>
         </div>
 
-        {/* Tooltips */}
         <Tooltip
           anchorSelect="[data-tooltip-id='tooltip-home']"
           content="Go to Home"
