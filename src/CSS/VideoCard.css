@@ -1,4 +1,4 @@
-.video-card-grid {
+/* .video-card-grid {
   float: left;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -158,5 +158,223 @@
 
   .video-card__title {
     font-size: 16px;
+  }
+} */
+
+.video-card-grid {
+  float: left;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 16px;
+  width: 100%;
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--l-2);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--l-1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: clamp(1px, 2vw, 1px);
+}
+
+.video-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px var(--l-1);
+}
+
+.video-card__video {
+  width: 100%;
+  height: clamp(150px, 20vw, 200px);
+  object-fit: cover;
+}
+
+.video-card__content {
+  padding: clamp(12px, 2vw, 20px);
+  text-align: center;
+}
+
+.video-card__title {
+  font-size: clamp(15px, 2vw, 19px);
+  margin-bottom: clamp(4px, 1vw, 8px);
+  color: var(--l-4);
+}
+
+.video-card__buttons {
+  display: flex;
+  justify-content: center;
+  gap: clamp(2px, 1vw, 5px);
+}
+
+.btn {
+  all: unset;
+  padding: clamp(0.2rem, 1vw, 0.6rem) clamp(0.7rem, 3vw, 1rem);
+  background-color: var(--l-3);
+  color: var(--cl);
+  line-height: 1.5;
+  font-weight: 600;
+  border: 2px solid var(--l-2);
+  border-radius: 1000px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+  font-size: clamp(10px, 2vw, 14px);
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  background: var(--l-2);
+  border: 2px solid var(--l-2);
+  width: 100%;
+  height: 103%;
+  pointer-events: none;
+  transform: skew(30deg) translateY(60);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.btn::before {
+  --direction: 1;
+  top: -103%;
+  left: -65%;
+}
+
+.btn::after {
+  --direction: -1;
+  top: 102%;
+  left: 60%;
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  transform: skew(30deg) translateY(calc(var(--direction) * 100%));
+}
+
+.text-container {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.text {
+  display: block;
+  transition: 0.3s;
+}
+
+.btn:hover .text:nth-child(1) {
+  color: var(--cl);
+  translate: 0 80%;
+}
+
+.text:nth-child(2) {
+  color: var(--cl);
+  position: absolute;
+  inset: 0;
+  translate: 0 -88%;
+}
+
+.btn:hover .text:nth-child(2) {
+  transition-delay: 0.1s;
+  translate: 0 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+  .video-card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .video-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .video-card__video {
+    height: clamp(120px, 18vw, 180px);
+  }
+
+  .video-card__content {
+    padding: clamp(10px, 1.8vw, 18px);
+  }
+}
+
+@media (max-width: 768px) {
+  .video-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .video-card__video {
+    height: clamp(100px, 16vw, 160px);
+  }
+
+  .video-card__title {
+    font-size: clamp(14px, 1.8vw, 18px);
+  }
+
+  .btn {
+    padding: clamp(0.15rem, 0.8vw, 0.5rem) clamp(0.6rem, 2.5vw, 0.9rem);
+    font-size: clamp(9px, 1.8vw, 13px);
+  }
+}
+
+@media (max-width: 600px) {
+  .video-card-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .video-card__video {
+    height: clamp(90px, 15vw, 140px);
+  }
+
+  .video-card__content {
+    padding: clamp(8px, 1.5vw, 15px);
+  }
+
+  .video-card__title {
+    font-size: clamp(13px, 1.5vw, 16px);
+  }
+
+  .btn {
+    padding: clamp(0.1rem, 0.7vw, 0.4rem) clamp(0.5rem, 2vw, 0.8rem);
+    font-size: clamp(8px, 1.5vw, 12px);
+  }
+}
+
+@media (max-width: 400px) {
+  .video-card-grid {
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .video-card__video {
+    height: clamp(80px, 14vw, 120px);
+  }
+
+  .video-card__content {
+    padding: clamp(6px, 1.2vw, 12px);
+  }
+
+  .video-card__title {
+    font-size: clamp(12px, 1.2vw, 14px);
+  }
+
+  .btn {
+    padding: clamp(0.1rem, 0.6vw, 0.3rem) clamp(0.4rem, 1.8vw, 0.7rem);
+    font-size: clamp(7px, 1.2vw, 11px);
   }
 }

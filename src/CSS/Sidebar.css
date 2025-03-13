@@ -1,4 +1,4 @@
-button,
+/* button,
 a {
   all: unset;
   font: inherit;
@@ -129,4 +129,292 @@ body.active .toggle-btn {
   color: var(--l-4);
   font-weight: 400;
   align-items: center;
+} */
+
+button,
+a {
+  all: unset;
+  font: inherit;
+  cursor: pointer;
+}
+
+nav {
+  position: fixed;
+  width: 5rem;
+  background-color: var(--l-1);
+  padding: 1rem 0.75rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: width 500ms ease;
+  z-index: 9999;
+  left: 0;
+  height: calc(100vh - 1rem);
+  margin-left: 0.5rem;
+}
+
+body.active nav {
+  width: 15rem;
+  left: 0;
+  height: calc(100vh - 1rem);
+  margin-left: 0.5rem;
+}
+
+.sidebar-heading {
+  color: var(--l-4);
+  font-weight: bold;
+  font-size: 2.3rem;
+}
+
+.sidebar-header,
+.sidebar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  margin-bottom: 1.5rem;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.logo-wrapper>img {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-color: var(--l-2);
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+}
+
+.sidebar-links {
+  flex-direction: column;
+  margin-bottom: auto;
+  gap: 0.6rem;
+  padding-top: 1.5rem;
+}
+
+nav>.sidebar-links {
+  border-top: 1px solid var(--l-4);
+}
+
+body.active .sidebar-links,
+body.active .sidebar-header,
+body.active .user-profile {
+  justify-content: start;
+  align-items: stretch;
+}
+
+.link {
+  display: flex;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  gap: 0.7rem;
+}
+
+.hidden {
+  display: none;
+}
+
+body.active .hidden {
+  display: flex;
+}
+
+.link:hover,
+.link.active:hover {
+  background-color: var(--l-2);
+}
+
+.link.active {
+  background-color: var(--l-2);
+}
+
+.icons {
+  width: 24px;
+  height: 24px;
+  color: var(--l-4);
+}
+
+.sidebar-bottom .sidebar-links {
+  padding-bottom: 1.5rem;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: -50px;
+  padding: 0.5rem;
+  background-color: var(--l-1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.25s ease;
+}
+
+body.active .toggle-btn {
+  transform: rotate(180deg);
+}
+
+.icon-name {
+  font-size: 1.2rem;
+  color: var(--l-4);
+  font-weight: 400;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+  nav {
+    width: 4.5rem;
+    margin-left: 0.5rem;
+  }
+
+  body.active nav {
+    width: 13rem;
+    margin-left: 0.5rem;
+  }
+
+  .sidebar-heading {
+    font-size: 2.1rem;
+  }
+
+  .logo-wrapper>img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav {
+    width: 4rem;
+    margin-left: 0.5rem;
+  }
+
+  body.active nav {
+    width: 11rem;
+    margin-left: 0.5rem;
+  }
+
+  .sidebar-heading {
+    font-size: 1.9rem;
+  }
+
+  .logo-wrapper>img {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .link {
+    padding: 0.5rem;
+  }
+
+  .icon-name {
+    font-size: 1.1rem;
+  }
+
+  .toggle-btn {
+    right: -45px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 3.5rem;
+    padding: 0.75rem 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  body.active nav {
+    width: 10rem;
+    margin-left: 0.5rem;
+  }
+
+  .sidebar-heading {
+    font-size: 1.7rem;
+  }
+
+  .logo-wrapper>img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    width: 3rem;
+    margin-left: 0.5rem;
+  }
+
+  body.active nav {
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .sidebar-heading {
+    font-size: 1.5rem;
+  }
+
+  .logo-wrapper>img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .link {
+    padding: 0.4rem;
+  }
+
+  .icons {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  nav {
+    width: 2.5rem;
+    margin-left: 0.5rem;
+  }
+
+  body.active nav {
+    padding: 0.4rem;
+    margin-left: 0.5rem;
+  }
+
+  .sidebar-heading {
+    font-size: 1.3rem;
+  }
+
+  .logo-wrapper>img {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .link {
+    padding: 0.3rem;
+    gap: 0.5rem;
+  }
+
+  .icons {
+    width: 18px;
+    height: 18px;
+  }
+
+  .icon-name {
+    font-size: 0.9rem;
+  }
+
+  .toggle-btn {
+    padding: 0.4rem;
+  }
 }

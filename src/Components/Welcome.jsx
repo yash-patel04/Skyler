@@ -13,7 +13,7 @@ const Welcome = () => {
     <>
       <div className="outer-container">
         <div className="content">
-          <h1>Welcome to </h1>
+          <h1 className="content-h1">Welcome to </h1>
           <h1 className="title">
             Skyler
             <div className="aurora">

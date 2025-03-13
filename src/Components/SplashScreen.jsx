@@ -5,7 +5,6 @@ import logo from "../assets/Videos/Logo-2.mp4";
 
 const SplashScreen = () => {
   const [isEntering, setIsEntering] = useState(true);
-  const [isExiting, setIsExiting] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,8 +24,7 @@ const SplashScreen = () => {
 
   return (
     <div
-      className={`splash-screen ${isEntering ? "enter-animation" : ""} ${isExiting ? "exit-animation" : ""
-        }`}
+      className={`splash-screen ${isEntering ? "enter-animation" : "exit-animation"}`}
     >
       <video className="splash-video" autoPlay muted onEnded={handleVideoEnd}>
         <source src={logo} type="video/mp4" />
