@@ -4,27 +4,26 @@ import "../CSS/SplashScreen.css";
 import logo from "../assets/Videos/Logo-2.mp4";
 
 const SplashScreen = () => {
-  const [isEntering, setIsEntering] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsEntering(false);
+      setIsVisible(false);
     }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
 
   const handleVideoEnd = () => {
+    setIsVisible(false);
     setTimeout(() => {
       navigate("/auth");
     }, 1000);
   };
 
   return (
-    <div
-      className={`splash-screen ${isEntering ? "enter-animation" : "exit-animation"}`}
-    >
+    <div className={`splash-screen ${isVisible ? "enter-animation" : "exit-animation"}`}>
       <video className="splash-video" autoPlay muted onEnded={handleVideoEnd}>
         <source src={logo} type="video/mp4" />
         Your browser does not support the video tag.
