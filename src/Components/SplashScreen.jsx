@@ -10,21 +10,26 @@ const SplashScreen = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 1000);
+      setTimeout(() => {
+        navigate("/auth");
+      }, 1000); // Wait for exit animation to complete
+    }, 10000); // Show video for 2 seconds
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [navigate]);
 
-  const handleVideoEnd = () => {
-    setIsVisible(false);
-    setTimeout(() => {
-      navigate("/auth");
-    }, 1000);
-  };
+  // const handleVideoEnd = () => {
+  //   setIsVisible(false);
+  //   setTimeout(() => {
+  //     navigate("/auth");
+  //   }, 1000);
+  // };
 
   return (
     <div className={`splash-screen ${isVisible ? "enter-animation" : "exit-animation"}`}>
-      <video className="splash-video" autoPlay muted onEnded={handleVideoEnd}>
+      <video className="splash-video" autoPlay muted 
+      // onEnded={handleVideoEnd}
+      >
         <source src={logo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
