@@ -61,7 +61,7 @@
 }
 
 .splash-screen.enter-animation {
-  opacity: 0;
+  opacity: 1;
   transform: scale(0.9);
   pointer-events: none;
 }
