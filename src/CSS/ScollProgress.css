@@ -40,7 +40,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
     #scroll-indicator {
         height: 5px;
         box-shadow: 1px 1px 10px var(--cl);

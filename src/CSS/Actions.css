@@ -98,7 +98,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
   .video-card-container {
     max-width: 100%;
     padding: 5px;

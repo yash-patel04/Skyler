@@ -447,7 +447,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
   .outer-container {
     padding: 3px;
   }

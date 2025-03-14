@@ -380,7 +380,7 @@ body.active .toggle-btn {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
   nav {
     width: 2.5rem;
     margin-left: 0.5rem;

@@ -211,13 +211,9 @@
     padding: 6px;
     margin-bottom: 8px;
   }
-
-  .layout {
-    flex-direction: column;
-  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
   .open {
     margin-left: 0;
     width: 100%;
