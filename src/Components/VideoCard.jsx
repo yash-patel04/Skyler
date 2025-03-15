@@ -24,6 +24,7 @@ const VideoCard = ({ categories }) => {
     }
   };
 
+  // Function to send action message to the MQTT broker
   const click = async (num) => {
     await fetch(`${import.meta.env.VITE_API}/mqtt/messages`, {
       method: "POST",
@@ -36,7 +37,6 @@ const VideoCard = ({ categories }) => {
     })
       .then((res) => res.json())
       .catch((error) => console.error("Error:", error));
-
   };
 
   return (
@@ -68,10 +68,7 @@ const VideoCard = ({ categories }) => {
                     </span>
                   </div>
                 </button>
-                <button
-                  className="btn"
-                  onClick={() => click(cat.clickEvent)}
-                >
+                <button className="btn" onClick={() => click(cat.clickEvent)}>
                   <div className="text-container">
                     <span className="text">{cat.btnName}</span>
                     <span className="text">{cat.btnName}</span>

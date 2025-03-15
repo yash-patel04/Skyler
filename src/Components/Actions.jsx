@@ -14,6 +14,8 @@ const Actions = () => {
       navigate("/auth");
       return;
     }
+
+    // Fetch actions from the server every 10 seconds
     async function getActions() {
       try {
         const response = await fetch(`${import.meta.env.VITE_API}/get`);
@@ -34,7 +36,7 @@ const Actions = () => {
       getActions();
     }, 10000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   return (
     <div className="video-card-container">

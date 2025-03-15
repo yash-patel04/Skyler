@@ -13,19 +13,22 @@ const About = () => {
           application enables seamless communication between users and Skyler
           through a robust system architecture. Commands initiated from the web
           interface are transmitted from Node.js to HiveMQTT, then relayed to a
-          NodeMCU, which interfaces with an Arduino Mega via serial communication.
-          Skyler is equipped with servo motors controlling its head, left hand,
-          and right hand movements, alongside DC motors powered by an L298N driver
-          for navigation. An ultrasonic sensor enhances Skyler’s functionality by
-          detecting distances, allowing it to intelligently adjust its movements—such
-          as moving forward, turning left, or stopping—based on environmental awareness.
-          With a comprehensive command set, including actions like "Shake Hand",
-          "Move Forward", "Both Hands Up" and specialized gestures like "Dab", "SRK"
-          Skyler offers precise control for users of all backgrounds. Powered by a 12V
-          battery and activated via a main switch, Skyler is designed for reliability
-          and responsiveness. Whether you're issuing simple navigation instructions or
-          complex servo-based actions, the Skyler Control Web App provides an accessible
-          and efficient solution for anyone looking to harness the power of robotic automation.
+          NodeMCU, which interfaces with an Arduino Mega via serial
+          communication. Skyler is equipped with servo motors controlling its
+          head, left hand, and right hand movements, alongside DC motors powered
+          by an L298N driver for navigation. An ultrasonic sensor enhances
+          Skyler’s functionality by detecting distances, allowing it to
+          intelligently adjust its movements—such as moving forward, turning
+          left, or stopping—based on environmental awareness. With a
+          comprehensive command set, including actions like &quot;Shake
+          Hand&quot;, &quot;Move Forward&quot;, &quot;Both Hands Up&quot; and
+          specialized gestures like &quot;Dab&quot;, &quot;SRK&quot; Skyler
+          offers precise control for users of all backgrounds. Powered by a 12V
+          battery and activated via a main switch, Skyler is designed for
+          reliability and responsiveness. Whether you&apos;re issuing simple
+          navigation instructions or complex servo-based actions, the Skyler
+          Control Web App provides an accessible and efficient solution for
+          anyone looking to harness the power of robotic automation.
         </p>
       </div>
     </div>

@@ -68,7 +68,6 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           anchorSelect="[data-tooltip-id='tooltip-actions']"
           content="View Actions"
         />
-
       </nav>
     </>
   );

@@ -10,6 +10,7 @@ import { Tooltip } from "react-tooltip";
 const Layout = () => {
   const [isActive, setIsActive] = useState(false);
 
+  // Function to send initial message to the MQTT broker
   const setInitial = async () => {
     await fetch(`${import.meta.env.VITE_API}/mqtt/messages`, {
       method: "POST",
@@ -36,7 +37,10 @@ const Layout = () => {
         </div>
         <div>
           <button className="initial" onClick={setInitial}>
-            <GiVintageRobot className="l-btn-container set-initial" data-tooltip-id="tooltip-initial" />
+            <GiVintageRobot
+              className="l-btn-container set-initial"
+              data-tooltip-id="tooltip-initial"
+            />
           </button>
         </div>
 
@@ -45,7 +49,6 @@ const Layout = () => {
           anchorSelect="[data-tooltip-id='tooltip-initial']"
           content="Set Initial"
         />
-
       </div>
     </>
   );

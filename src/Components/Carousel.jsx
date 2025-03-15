@@ -12,7 +12,6 @@ import arrowLeft from "../assets/arrow-left.svg";
 import arrowRight from "../assets/arrow-right.svg";
 
 function Carousel({ slides }) {
-
   return (
     <Swiper
       modules={[EffectCoverflow, Navigation, Pagination]}

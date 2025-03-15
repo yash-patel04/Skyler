@@ -185,7 +185,7 @@ body.active nav {
   gap: 1.25rem;
 }
 
-.logo-wrapper>img {
+.logo-wrapper > img {
   width: 3.25rem;
   height: 3.25rem;
   background-color: var(--l-2);
@@ -200,7 +200,7 @@ body.active nav {
   padding-top: 1.5rem;
 }
 
-nav>.sidebar-links {
+nav > .sidebar-links {
   border-top: 1px solid var(--l-4);
 }
 
@@ -285,7 +285,7 @@ body.active .toggle-btn {
     font-size: 2.1rem;
   }
 
-  .logo-wrapper>img {
+  .logo-wrapper > img {
     width: 3rem;
     height: 3rem;
   }
@@ -306,7 +306,7 @@ body.active .toggle-btn {
     font-size: 1.9rem;
   }
 
-  .logo-wrapper>img {
+  .logo-wrapper > img {
     width: 2.75rem;
     height: 2.75rem;
   }
@@ -340,7 +340,7 @@ body.active .toggle-btn {
     font-size: 1.7rem;
   }
 
-  .logo-wrapper>img {
+  .logo-wrapper > img {
     width: 2.5rem;
     height: 2.5rem;
   }
@@ -361,7 +361,7 @@ body.active .toggle-btn {
     font-size: 1.5rem;
   }
 
-  .logo-wrapper>img {
+  .logo-wrapper > img {
     width: 2rem;
     height: 2rem;
   }
@@ -395,7 +395,7 @@ body.active .toggle-btn {
     font-size: 1.3rem;
   }
 
-  .logo-wrapper>img {
+  .logo-wrapper > img {
     width: 1.75rem;
     height: 1.75rem;
   }

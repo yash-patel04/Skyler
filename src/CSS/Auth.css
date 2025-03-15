@@ -137,6 +137,7 @@ label {
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
+  min-height: 400px;
 }
 
 .left-section {
@@ -247,11 +248,11 @@ label {
 
 .eye-button {
   display: flex;
-  align-items: center;
+  align-items: start;
   margin-right: 10px;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 10px;
   bottom: 0;
   background: none;
   border: none;
@@ -259,11 +260,39 @@ label {
   font-size: 18px;
   color: var(--l-2);
 }
+.error-container {
+  min-height: 20px;
+  margin-top: 4px;
+  margin-left: 10px;
+}
+
+.error {
+  color: var(--rbh);
+  font-size: 0.7rem;
+  opacity: 0;
+  display: block;
+}
+
+.error.visible {
+  animation: fadeSlideIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Responsive Design */
 @media (max-width: 1440px) {
   .form-container {
     max-width: 900px;
+    min-height: 480px;
   }
 
   .left-section {
@@ -291,6 +320,7 @@ label {
 @media (max-width: 1024px) {
   .form-container {
     max-width: 750px;
+    min-height: 450px;
   }
 
   .left-section {
@@ -323,6 +353,7 @@ label {
   .form-container {
     flex-direction: column;
     max-width: 90vw;
+    min-height: 500px;
   }
 
   .left-section,
@@ -361,6 +392,7 @@ label {
 @media (max-width: 600px) {
   .form-container {
     max-width: 95vw;
+    min-height: 450px;
   }
 
   .left-section,
@@ -398,6 +430,7 @@ label {
 @media (max-width: 425px) {
   .form-container {
     max-width: 100%;
+    min-height: 400px;
   }
 
   .left-section,

@@ -16,10 +16,14 @@ const SplashScreen = () => {
     }, 10000);
 
     return () => clearTimeout(timer);
-  }, [navigate]);
+  });
 
   return (
-    <div className={`splash-screen ${isVisible ? "enter-animation" : "exit-animation"}`}>
+    <div
+      className={`splash-screen ${
+        isVisible ? "enter-animation" : "exit-animation"
+      }`}
+    >
       <video className="splash-video" autoPlay muted>
         <source src={logo} type="video/mp4" />
         Your browser does not support the video tag.
