@@ -16,7 +16,7 @@ const SplashScreen = () => {
     }, 10000);
 
     return () => clearTimeout(timer);
-  });
+  },[]);
 
   return (
     <div

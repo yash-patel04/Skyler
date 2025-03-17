@@ -36,7 +36,7 @@ const Actions = () => {
       getActions();
     }, 10000);
     return () => clearInterval(interval);
-  });
+  },[]);
 
   return (
     <div className="video-card-container">

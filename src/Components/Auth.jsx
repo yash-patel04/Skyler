@@ -15,7 +15,7 @@ const Auth = () => {
     if (localStorage.getItem("token") != null) {
       navigate("/client/home");
     }
-  });
+  },[]);
 
   const validateInputs = () => {
     const newErrors = { username: "", password: "" };

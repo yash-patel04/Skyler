@@ -11,7 +11,7 @@ const HomeScreen = () => {
       navigate("/auth");
       return;
     }
-  });
+  },[]);
 
   return (
     <>
