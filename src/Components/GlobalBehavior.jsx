@@ -6,7 +6,7 @@ import Home from "./Home";
 import Actions from "./Actions";
 import Auth from "./Auth";
 
-function GlobalBehavior() {
+const GlobalBehavior= () => {
   useEffect(() => {
     // Disable text selection globally
     document.body.style.userSelect = "none";
