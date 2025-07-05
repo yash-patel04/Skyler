@@ -1,28 +1,28 @@
 /* eslint-disable react/prop-types */
-import { useRef, useState } from "react";
+// import { useRef, useState } from "react";
 import "../CSS/VideoCard.css";
 
 const VideoCard = ({ categories }) => {
-  const [playingVideoId, setPlayingVideoId] = useState(null);
+  // const [playingVideoId, setPlayingVideoId] = useState(null);
 
-  const videoRefs = useRef({});
+  // const videoRefs = useRef({});
 
-  const togglePlayPause = (id) => {
-    const videoRef = videoRefs.current[id];
-    if (playingVideoId === id) {
-      videoRef.pause();
-      setPlayingVideoId(null);
-    } else {
-      if (playingVideoId !== null) {
-        const previousVideo = videoRefs.current[playingVideoId];
-        if (previousVideo) {
-          previousVideo.pause();
-        }
-      }
-      videoRef.play();
-      setPlayingVideoId(id);
-    }
-  };
+  // const togglePlayPause = (id) => {
+  //   const videoRef = videoRefs.current[id];
+  //   if (playingVideoId === id) {
+  //     videoRef.pause();
+  //     setPlayingVideoId(null);
+  //   } else {
+  //     if (playingVideoId !== null) {
+  //       const previousVideo = videoRefs.current[playingVideoId];
+  //       if (previousVideo) {
+  //         previousVideo.pause();
+  //       }
+  //     }
+  //     videoRef.play();
+  //     setPlayingVideoId(id);
+  //   }
+  // };
 
   // Function to send action message to the MQTT broker
   const click = async (num) => {
@@ -44,18 +44,18 @@ const VideoCard = ({ categories }) => {
       <div className="video-card-grid">
         {categories.map((cat) => (
           <div key={cat._id} className="video-card">
-            <video
+            {/* <video
               ref={(el) => (videoRefs.current[cat._id] = el)}
               src={cat.videoSrc}
               className="video-card__video"
               controls={false}
               muted
               data-id={cat._id}
-            />
+            /> */}
             <div className="video-card__content">
               <h3 className="video-card__title">{cat.title}</h3>
               <div className="video-card__buttons">
-                <button
+                {/* <button
                   className="btn"
                   onClick={() => togglePlayPause(cat._id)}
                 >
@@ -67,7 +67,7 @@ const VideoCard = ({ categories }) => {
                       {playingVideoId === cat._id ? "Pause" : "Play"}
                     </span>
                   </div>
-                </button>
+                </button> */}
                 <button className="btn" onClick={() => click(cat.clickEvent)}>
                   <div className="text-container">
                     <span className="text">{cat.btnName}</span>
